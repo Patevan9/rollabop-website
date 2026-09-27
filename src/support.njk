@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: Support
+description: Help with Rollabop. Gameplay, technical issues, saving, purchases, accessibility and how to contact us.
+pageClass: support
+permalink: /support/
+---
+{%- import "macros.njk" as ui -%}
+<section class="page-hero">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow">Support</p>
+    <h1 class="page-title">How can we help?</h1>
+    <p class="lead">Answers for common questions, and how to reach us.</p>
+    <nav class="jump" aria-label="On this page">
+      <ul role="list">
+        <li><a href="#gameplay">Gameplay help</a></li>
+        <li><a href="#technical">Technical issues</a></li>
+        <li><a href="#saving">Saving &amp; progress</a></li>
+        <li><a href="#purchases">Purchases</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#contact">Contact support</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<div class="wrap wrap--narrow prose-stack">
+  <section class="panel" aria-labelledby="gameplay">
+    <h2 id="gameplay">Gameplay help</h2>
+    <p>New to Rollabop? The <a href="/how-to-play/">How to Play</a> guide explains everything in seven short cards.</p>
+    <ul>
+      <li><strong>Take your time.</strong> There is no clock. Study the pile before you move.</li>
+      <li><strong>Any ball can move.</strong> Even one buried at the bottom of the pile.</li>
+      <li><strong>Think one step further.</strong> Watch where the balls above a match will fall. That is where cascades begin.</li>
+    </ul>
+  </section>
+
+  <section class="panel" aria-labelledby="technical">
+    <h2 id="technical">Technical issues</h2>
+    <p>If Rollabop is not behaving as expected, these steps often help:</p>
+    <ol>
+      <li>Close Rollabop completely, then open it again.</li>
+      <li>Make sure your device and the app are up to date.</li>
+      <li>Restart your device.</li>
+    </ol>
+    <p>If the problem continues, please contact us. It helps to include your device model, Android version, Rollabop version, and what happened.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="saving">
+    <h2 id="saving">Saving &amp; progress {{ ui.tag("Coming before release") }}</h2>
+    <p>Details on how Rollabop saves your progress, and what happens when you change devices, will be published here before release.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="purchases">
+    <h2 id="purchases">Purchases {{ ui.tag("Coming before release") }}</h2>
+    <p>Rollabop's optional purchases are still being designed. Information on buying, restoring and refunds will be published here before any purchases are offered.</p>
+    <p class="muted">Our commitment: every level can be beaten by a thoughtful player without paying and without watching an ad.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="accessibility">
+    <h2 id="accessibility">Accessibility</h2>
+    <p>If anything in Rollabop is hard to see, hear, read or play, we want to know. Your feedback shapes the accessibility options we build next.</p>
+    <p>Read about <a href="/#access-title">our accessibility direction</a>.</p>
+  </section>
+
+  <section class="panel panel--contact" aria-labelledby="contact">
+    <h2 id="contact">Contact support</h2>
+    {%- if site.supportEmail %}
+    <p>Email us and we will get back to you as soon as we can.</p>
+    <p><a class="btn btn--primary" href="mailto:{{ site.supportEmail }}?subject=Rollabop%20support">{{ site.supportEmail }}</a></p>
+    {%- else %}
+    <p>A support contact will be published here before Rollabop's release.</p>
+    {%- endif %}
+  </section>
+</div>

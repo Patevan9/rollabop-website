@@ -1,0 +1,35 @@
+{
+  "_readme": "Site-wide settings. Edit values here; no design changes needed. Empty strings mean 'not set yet' and the site hides or softens that item automatically.",
+
+  "name": "Rollabop",
+  "studio": "Lippy Robotics Labs",
+  "attribution": "A game by Lippy Robotics Labs",
+  "tagline": "The physical pile is the puzzle.",
+  "description": "Rollabop is a physics puzzle game for Android. Reach into a living pile of balls, rearrange it under gravity, build larger matches, and discover the move that changes everything.",
+  "copyrightYear": 2026,
+
+  "url": "",
+  "_url_note": "Your domain, e.g. https://rollabop.com (no trailing slash). Leave empty until you have one. When set, the site adds canonical links, social preview URLs and a sitemap.",
+
+  "release": {
+    "status": "coming-soon",
+    "label": "Coming to Android",
+    "playStoreUrl": "",
+    "_note": "When the Play Store listing is live: paste its URL into playStoreUrl, add the official badge to assets.json (googlePlayBadge), and set status to 'available'. Until then only the 'Coming to Android' label shows."
+  },
+
+  "version": "",
+  "_version_note": "Current game version, e.g. 1.0.0. Leave empty before release; the About page then says 'Not yet released'.",
+
+  "supportEmail": "",
+  "_supportEmail_note": "Official support address. Leave empty until you have one; the Support page then says a contact is coming soon.",
+
+  "social": [],
+  "_social_note": "Official community links only, e.g. { \"label\": \"YouTube\", \"url\": \"https://...\" }. Empty list shows nothing.",
+
+  "privacy": {
+    "status": "draft",
+    "lastUpdated": "",
+    "_note": "Keep 'draft' until the policy has had its final review. While it is 'draft' the page shows a review banner and asks search engines not to index it. Set to 'final' and fill lastUpdated (e.g. 2026-11-01) when approved."
+  }
+}

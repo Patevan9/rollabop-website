@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: About
+description: About Rollabop and Lippy Robotics Labs.
+pageClass: about
+permalink: /about/
+---
+{%- import "macros.njk" as ui -%}
+<section class="page-hero">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow">About</p>
+    <h1 class="page-title">{{ ui.wordmark(assets, "wordmark--page") }}</h1>
+    <p class="lead">{{ site.description }}</p>
+  </div>
+</section>
+
+<div class="wrap wrap--narrow prose-stack">
+  <section class="panel about-studio" aria-labelledby="about-studio">
+    <p class="eyebrow">The studio</p>
+    <h2 id="about-studio" class="about-studio__mark">{{ ui.studiomark(assets, "studiomark--large") }}</h2>
+    <p>{{ copy.studio.text }}</p>
+  </section>
+
+  <section class="panel" aria-labelledby="about-details">
+    <h2 id="about-details">Details</h2>
+    <dl class="details">
+      <div><dt>Game</dt><dd>{{ site.name }}</dd></div>
+      <div><dt>Developer</dt><dd>{{ site.studio }}</dd></div>
+      <div><dt>Platform</dt><dd>Android{% if site.release.status != "available" %} (coming soon){% endif %}</dd></div>
+      <div><dt>Version</dt><dd>{{ site.version or "Not yet released" }}</dd></div>
+      {%- if site.url %}<div><dt>Website</dt><dd><a href="{{ site.url }}">{{ site.url | replace("https://", "") }}</a></dd></div>{% endif %}
+      <div><dt>Copyright</dt><dd>&copy; {{ site.copyrightYear }} {{ site.studio }}. All rights reserved.</dd></div>
+    </dl>
+  </section>
+
+  <section class="panel" aria-labelledby="about-links">
+    <h2 id="about-links">Links</h2>
+    <ul class="link-row" role="list">
+      <li><a class="btn" href="/how-to-play/">How to Play</a></li>
+      <li><a class="btn" href="/support/">Support</a></li>
+      <li><a class="btn" href="/privacy/">Privacy Policy</a></li>
+      {%- if site.release.playStoreUrl %}<li><a class="btn" href="{{ site.release.playStoreUrl }}" rel="noopener">Google Play</a></li>{% endif %}
+    </ul>
+  </section>
+
+  <section class="panel" aria-labelledby="about-credits">
+    <h2 id="about-credits">Website credits</h2>
+    <p class="small">Typefaces: Cormorant Garamond and Source Serif 4, both used under the SIL Open Font License.</p>
+  </section>
+</div>

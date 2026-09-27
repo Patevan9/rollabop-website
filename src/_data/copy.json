@@ -1,0 +1,694 @@
+{
+  "_readme": "Words and diagrams used on the Home and How to Play pages. Edit text freely. Diagram coordinates are in ball-widths: x from the left, y from the floor. Ball states: 'held', 'from' (where a ball came from), 'match', 'fall', 'touch', 'hint'. A 'tag' marks something as not final: e.g. 'Planned', 'In design', 'Later'.",
+  "hero": {
+    "eyebrow": "A game by Lippy Robotics Labs",
+    "headline": "The physical pile is the puzzle.",
+    "body": "Reach into a living pile of balls, rearrange it under gravity, build larger matches, and discover the move that changes everything.",
+    "secondaryLabel": "See how it plays",
+    "secondaryHref": "#how-it-plays"
+  },
+  "whatIs": {
+    "eyebrow": "What is Rollabop?",
+    "title": "A puzzle you can reach into.",
+    "intro": "Rollabop is played inside a tall walnut tray full of clear, glowing balls. Nothing is locked in place. Every ball has weight, and every move changes the pile.",
+    "features": [
+      {
+        "name": "Physical",
+        "color": "blue",
+        "text": "Move any ball. Everything around it reacts."
+      },
+      {
+        "name": "Clever",
+        "color": "gold",
+        "text": "Build rows of 3, 4, 5 or more. Bigger thinking earns bigger rewards."
+      },
+      {
+        "name": "Calm",
+        "color": "green",
+        "text": "No frantic clock. Observe the board and make your move."
+      },
+      {
+        "name": "Alive",
+        "color": "purple",
+        "text": "Gravity, collisions and cascades can change the puzzle after every move."
+      }
+    ]
+  },
+  "howItPlays": {
+    "eyebrow": "How it plays",
+    "title": "Five moments in every move.",
+    "steps": [
+      {
+        "title": "Reach into the pile",
+        "text": "Touch any ball, even one buried deep in the pile.",
+        "diagram": {
+          "w": 5,
+          "h": 3.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "red"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 2.5,
+              "y": 0.5,
+              "c": "green"
+            },
+            {
+              "x": 3.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 4.5,
+              "y": 0.5,
+              "c": "gold"
+            },
+            {
+              "x": 1.0,
+              "y": 1.37,
+              "c": "gold"
+            },
+            {
+              "x": 2.0,
+              "y": 1.37,
+              "c": "purple",
+              "s": "touch"
+            },
+            {
+              "x": 3.0,
+              "y": 1.37,
+              "c": "red"
+            },
+            {
+              "x": 4.0,
+              "y": 1.37,
+              "c": "green"
+            },
+            {
+              "x": 1.5,
+              "y": 2.24,
+              "c": "blue"
+            },
+            {
+              "x": 2.5,
+              "y": 2.24,
+              "c": "green"
+            },
+            {
+              "x": 3.5,
+              "y": 2.24,
+              "c": "purple"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Move a ball",
+        "text": "Carry it anywhere. The balls around it shift and make way.",
+        "diagram": {
+          "w": 5,
+          "h": 3.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "red"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 2.5,
+              "y": 0.5,
+              "c": "green"
+            },
+            {
+              "x": 3.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 4.5,
+              "y": 0.5,
+              "c": "gold"
+            },
+            {
+              "x": 1.0,
+              "y": 1.37,
+              "c": "gold"
+            },
+            {
+              "x": 2.0,
+              "y": 1.37,
+              "c": "purple",
+              "s": "from"
+            },
+            {
+              "x": 3.0,
+              "y": 1.37,
+              "c": "red"
+            },
+            {
+              "x": 4.0,
+              "y": 1.37,
+              "c": "green"
+            },
+            {
+              "x": 1.5,
+              "y": 2.24,
+              "c": "blue"
+            },
+            {
+              "x": 2.5,
+              "y": 2.24,
+              "c": "green"
+            },
+            {
+              "x": 4.3,
+              "y": 2.55,
+              "c": "purple",
+              "s": "held"
+            }
+          ],
+          "arrows": [
+            [
+              2.0,
+              1.75,
+              4.0,
+              2.4,
+              -0.9
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Build a horizontal match",
+        "text": "Line up 3 or more of the same kind in a row.",
+        "diagram": {
+          "w": 5,
+          "h": 3.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "red"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 2.5,
+              "y": 0.5,
+              "c": "green"
+            },
+            {
+              "x": 3.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 4.5,
+              "y": 0.5,
+              "c": "gold"
+            },
+            {
+              "x": 1.0,
+              "y": 1.37,
+              "c": "purple",
+              "s": "match"
+            },
+            {
+              "x": 2.0,
+              "y": 1.37,
+              "c": "purple",
+              "s": "match"
+            },
+            {
+              "x": 3.0,
+              "y": 1.37,
+              "c": "purple",
+              "s": "match"
+            },
+            {
+              "x": 4.0,
+              "y": 1.37,
+              "c": "green"
+            },
+            {
+              "x": 1.5,
+              "y": 2.24,
+              "c": "blue"
+            },
+            {
+              "x": 2.5,
+              "y": 2.24,
+              "c": "gold"
+            },
+            {
+              "x": 3.5,
+              "y": 2.24,
+              "c": "red"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Watch the pile react",
+        "text": "The match clears. Everything above it falls, bounces and settles.",
+        "diagram": {
+          "w": 5,
+          "h": 3.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "red"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 2.5,
+              "y": 0.5,
+              "c": "green"
+            },
+            {
+              "x": 3.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 4.5,
+              "y": 0.5,
+              "c": "gold"
+            },
+            {
+              "x": 4.0,
+              "y": 1.37,
+              "c": "green"
+            },
+            {
+              "x": 1.2,
+              "y": 1.72,
+              "c": "blue",
+              "s": "fall"
+            },
+            {
+              "x": 2.1,
+              "y": 1.85,
+              "c": "gold",
+              "s": "fall"
+            },
+            {
+              "x": 3.05,
+              "y": 1.78,
+              "c": "red",
+              "s": "fall"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Find the next opportunity",
+        "text": "The pile has changed. Look again. Something new is waiting.",
+        "diagram": {
+          "w": 5,
+          "h": 3.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "red"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "blue",
+              "s": "hint"
+            },
+            {
+              "x": 2.5,
+              "y": 0.5,
+              "c": "green"
+            },
+            {
+              "x": 3.5,
+              "y": 0.5,
+              "c": "blue",
+              "s": "hint"
+            },
+            {
+              "x": 4.5,
+              "y": 0.5,
+              "c": "gold"
+            },
+            {
+              "x": 1.0,
+              "y": 1.37,
+              "c": "blue",
+              "s": "hint"
+            },
+            {
+              "x": 2.0,
+              "y": 1.37,
+              "c": "gold"
+            },
+            {
+              "x": 3.0,
+              "y": 1.37,
+              "c": "red"
+            },
+            {
+              "x": 4.0,
+              "y": 1.37,
+              "c": "green"
+            }
+          ]
+        }
+      }
+    ],
+    "noGrid": {
+      "title": "No grid. No swapping.",
+      "text": "Balls are never locked into cells, and you never trade two neighbours. You carry a ball through a real pile, let go, and gravity decides what happens next."
+    },
+    "principle": "Match 3 or more. Larger matches earn more."
+  },
+  "galaxy": {
+    "eyebrow": "Galaxy Balls",
+    "title": "Some balls are more than pieces.",
+    "body": "Discover and collect spectacular Galaxy Balls, each with its own miniature world inside.",
+    "fairness": "Beauty, never power. A Galaxy Ball's rarity or price never makes it stronger than another. Each Galaxy design simply forms its own matching family.",
+    "note": "How Galaxy Balls are discovered and collected will be shared closer to release."
+  },
+  "levels": {
+    "eyebrow": "Levels & puzzles",
+    "title": "It begins with a match. It becomes a puzzle.",
+    "intro": "Early levels teach the feel of the pile. Later ones ask you to stop, look, and plan a move that sets off something bigger.",
+    "items": [
+      {
+        "name": "Handcrafted levels",
+        "text": "Designed by hand to reward a moment of insight.",
+        "tag": ""
+      },
+      {
+        "name": "Larger-match challenges",
+        "text": "Goals that ask for rows of 4, 5 or more.",
+        "tag": ""
+      },
+      {
+        "name": "Cascades",
+        "text": "Set up chain reactions where one clear causes the next.",
+        "tag": ""
+      },
+      {
+        "name": "Physical structures",
+        "text": "Elegant obstacles that change how the pile moves, later in the journey.",
+        "tag": "Planned"
+      },
+      {
+        "name": "Mastery",
+        "text": "Solved levels stay worth replaying, to play them better. Star ratings are planned.",
+        "tag": ""
+      }
+    ]
+  },
+  "respect": {
+    "eyebrow": "Player-first design",
+    "title": "Made to respect the player.",
+    "lines": [
+      "No surprise ads.",
+      "No fake urgency.",
+      "No frantic timers.",
+      "No pay-to-win progression.",
+      "No punishment for thoughtful play."
+    ],
+    "promise": "Every level can be beaten by a thoughtful player without paying and without watching an ad.",
+    "note": "Optional rewarded ads may come later, and only ever when you choose them."
+  },
+  "accessibility": {
+    "eyebrow": "Accessibility",
+    "title": "Clear to see. Comfortable to play.",
+    "intro": "Rollabop is still in development. This is the direction we are building toward.",
+    "items": [
+      {
+        "name": "More than colour",
+        "text": "Matching information should not rely on colour alone. Shape cues for each ball family are in development."
+      },
+      {
+        "name": "Readable contrast",
+        "text": "Clear, high-contrast text and controls on the dark wood."
+      },
+      {
+        "name": "Every screen size",
+        "text": "Layouts designed for phones, tablets and foldables, folded or open."
+      },
+      {
+        "name": "Your sound, your way",
+        "text": "Sound, music and haptics controllable independently."
+      },
+      {
+        "name": "More to come",
+        "text": "Additional accessibility options are planned."
+      }
+    ]
+  },
+  "studio": {
+    "eyebrow": "The studio",
+    "text": "Rollabop is created by Lippy Robotics Labs, an independent studio exploring tactile games, local AI, robotics and technology."
+  },
+  "howToPlay": {
+    "title": "How to play",
+    "intro": "One idea per card. Take your time. There is no clock.",
+    "cards": [
+      {
+        "title": "Make a match",
+        "text": "Line up 3 or more balls of the same kind in a horizontal row. When the pile settles, the match clears.",
+        "tag": "",
+        "diagram": {
+          "w": 5,
+          "h": 2.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "red"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "blue",
+              "s": "match"
+            },
+            {
+              "x": 2.5,
+              "y": 0.5,
+              "c": "blue",
+              "s": "match"
+            },
+            {
+              "x": 3.5,
+              "y": 0.5,
+              "c": "blue",
+              "s": "match"
+            },
+            {
+              "x": 4.5,
+              "y": 0.5,
+              "c": "gold"
+            },
+            {
+              "x": 2.0,
+              "y": 1.37,
+              "c": "green"
+            },
+            {
+              "x": 3.0,
+              "y": 1.37,
+              "c": "purple"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Build bigger matches",
+        "text": "Match 3 or more. Larger matches earn more. It is often worth waiting for the bigger row.",
+        "tag": "",
+        "diagram": {
+          "w": 5,
+          "h": 2.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "gold",
+              "s": "match"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "gold",
+              "s": "match"
+            },
+            {
+              "x": 2.5,
+              "y": 0.5,
+              "c": "gold",
+              "s": "match"
+            },
+            {
+              "x": 3.5,
+              "y": 0.5,
+              "c": "gold",
+              "s": "match"
+            },
+            {
+              "x": 4.5,
+              "y": 0.5,
+              "c": "gold",
+              "s": "match"
+            },
+            {
+              "x": 1.0,
+              "y": 1.37,
+              "c": "red"
+            },
+            {
+              "x": 2.0,
+              "y": 1.37,
+              "c": "blue"
+            },
+            {
+              "x": 3.0,
+              "y": 1.37,
+              "c": "green"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Use the physics",
+        "text": "Touch any ball, even a buried one, and carry it through the pile. Let go, and gravity takes over. Balls fall, roll and settle.",
+        "tag": "",
+        "diagram": {
+          "w": 5,
+          "h": 2.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "purple"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "green"
+            },
+            {
+              "x": 2.5,
+              "y": 0.5,
+              "c": "red"
+            },
+            {
+              "x": 1.0,
+              "y": 1.37,
+              "c": "blue",
+              "s": "from"
+            },
+            {
+              "x": 4.2,
+              "y": 1.6,
+              "c": "blue",
+              "s": "held"
+            }
+          ],
+          "arrows": [
+            [
+              1.2,
+              1.7,
+              3.9,
+              1.7,
+              -0.5
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Cascades",
+        "text": "When a match clears, the balls above fall into the gap. If they land in a new row, that counts too.",
+        "tag": "",
+        "diagram": {
+          "w": 5,
+          "h": 2.2,
+          "balls": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "c": "green"
+            },
+            {
+              "x": 1.5,
+              "y": 0.5,
+              "c": "green"
+            },
+            {
+              "x": 3.5,
+              "y": 0.5,
+              "c": "red"
+            },
+            {
+              "x": 4.5,
+              "y": 0.5,
+              "c": "blue"
+            },
+            {
+              "x": 2.5,
+              "y": 1.55,
+              "c": "green",
+              "s": "fall"
+            }
+          ],
+          "arrows": [
+            [
+              2.5,
+              1.05,
+              2.5,
+              0.7,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Objectives",
+        "text": "Each level has a goal, shown before you begin. Read it, study the pile, then move.",
+        "tag": "In design",
+        "icon": "objective"
+      },
+      {
+        "title": "Stars & mastery",
+        "text": "Solved levels stay worth replaying. Come back to play them better. Star ratings for mastery are planned.",
+        "tag": "Planned",
+        "icon": "stars"
+      },
+      {
+        "title": "Obstacles",
+        "text": "Later levels may add elegant physical structures to steer around. They challenge the puzzle, not your finger.",
+        "tag": "Later",
+        "icon": "obstacle"
+      }
+    ]
+  }
+}

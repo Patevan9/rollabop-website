@@ -1,0 +1,91 @@
+{#- Reusable pieces. Import with: {% import "macros.njk" as ui %} -#}
+
+{#- The Rollabop name/logo. Uses the official logo once assets.json has it. -#}
+{#- The image's alt text ("Rollabop") is the accessible, searchable name. -#}
+{% macro wordmark(assets, cls="", priority=false) %}
+  {%- if assets.rollabopLogo.src -%}
+    <img class="wordmark-img {{ cls }}" src="{{ assets.rollabopLogo.src }}" alt="{{ assets.rollabopLogo.alt }}" width="{{ assets.rollabopLogo.width }}" height="{{ assets.rollabopLogo.height }}"{% if priority %} fetchpriority="high"{% else %} decoding="async"{% endif %}>
+  {%- else -%}
+    <span class="wordmark {{ cls }}">Rollabop</span>
+  {%- endif -%}
+{% endmacro %}
+
+{#- The studio name/logo. -#}
+{% macro studiomark(assets, cls="") %}
+  {%- if assets.lippyLogo.src -%}
+    <img class="studiomark-img {{ cls }}" src="{{ assets.lippyLogo.src }}" alt="{{ assets.lippyLogo.alt }}" width="{{ assets.lippyLogo.width }}" height="{{ assets.lippyLogo.height }}">
+  {%- else -%}
+    <span class="studiomark {{ cls }}">Lippy Robotics Labs</span>
+  {%- endif -%}
+{% endmacro %}
+
+{#- A small "not final yet" label. -#}
+{% macro tag(text) %}{% if text %}<span class="tag">{{ text }}</span>{% endif %}{% endmacro %}
+
+{#- One clear gameplay ball. color: blue | red | green | purple | gold -#}
+{% macro ball(color, cls="", style="") %}<span class="ball ball--{{ color }} {{ cls }}"{% if style %} style="{{ style }}"{% endif %}></span>{% endmacro %}
+
+{#- The Galaxy Ball. Needs the #galaxy-interior symbol on the page (partials/galaxy-defs.njk). -#}
+{% macro galaxyBall(cls="", style="") %}
+<span class="ball ball--galaxy {{ cls }}"{% if style %} style="{{ style }}"{% endif %}>
+  <span class="galaxy-spin"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#galaxy-interior" width="200" height="200"/></svg></span>
+  <span class="galaxy-twinkle" aria-hidden="true"></span>
+</span>
+{% endmacro %}
+
+{#- A small instructional diagram of balls on walnut. See content.json. -#}
+{% macro diagram(d, label, uid) %}
+<div class="diagram-panel">
+  <div class="diagram" style="--w:{{ d.w }};--h:{{ d.h }}" role="img" aria-label="{{ label }}">
+    {%- for b in d.balls %}
+    <span class="ball ball--{{ b.c }}{% if b.s %} is-{{ b.s }}{% endif %}" style="--x:{{ b.x }};--y:{{ b.y }}"></span>
+    {%- endfor %}
+    {%- if d.arrows %}
+    <svg class="diagram-arrows" viewBox="0 0 {{ d.w }} {{ d.h }}" aria-hidden="true" focusable="false">
+      <defs><marker id="arrow-{{ uid }}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+      {%- for a in d.arrows %}
+      <path d="M{{ a[0] }} {{ d.h - a[1] }} Q{{ (a[0] + a[2]) / 2 }} {{ d.h - (a[1] + a[3]) / 2 + a[4] }} {{ a[2] }} {{ d.h - a[3] }}" marker-end="url(#arrow-{{ uid }})"/>
+      {%- endfor %}
+    </svg>
+    {%- endif %}
+  </div>
+</div>
+{% endmacro %}
+
+{#- A screenshot, or a clearly labelled placeholder until the real one exists. -#}
+{% macro shot(s, cls="") %}
+<figure class="shot {{ cls }}{% if not s.src %} shot--placeholder{% endif %}" style="--ar: {{ s.width }} / {{ s.height }}">
+  {%- if s.src %}
+  <img src="{{ s.src }}" alt="{{ s.alt }}" width="{{ s.width }}" height="{{ s.height }}" loading="lazy" decoding="async">
+  {%- else %}
+  <div class="shot-empty">
+    <span class="shot-mark" aria-hidden="true"></span>
+    <span class="shot-label">{{ s.label }}</span>
+    <span class="shot-sub">Placeholder · real screenshot coming</span>
+  </div>
+  {%- endif %}
+</figure>
+{% endmacro %}
+
+{#- The main call to action. Shows the Play badge only once a real link exists. -#}
+{% macro playCta(site, assets) %}
+<div class="play-cta">
+  {%- if site.release.playStoreUrl %}
+  <a class="play-badge" href="{{ site.release.playStoreUrl }}" rel="noopener">
+    {%- if assets.googlePlayBadge.src %}
+    <img src="{{ assets.googlePlayBadge.src }}" alt="{{ assets.googlePlayBadge.alt }}" width="{{ assets.googlePlayBadge.width }}" height="{{ assets.googlePlayBadge.height }}">
+    {%- else %}<span class="btn btn--primary">Get it on Google Play</span>{% endif %}
+  </a>
+  {%- else %}
+  <p class="release-plaque"><span class="release-dot" aria-hidden="true"></span>{{ site.release.label }}</p>
+  {%- endif %}
+</div>
+{% endmacro %}
+
+{#- Section heading with eyebrow. -#}
+{% macro heading(eyebrow, title, id, level=2) %}
+<header class="section-head">
+  <p class="eyebrow">{{ eyebrow }}</p>
+  <h{{ level }} id="{{ id }}" class="section-title">{{ title }}</h{{ level }}>
+</header>
+{% endmacro %}

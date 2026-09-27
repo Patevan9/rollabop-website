@@ -1,0 +1,89 @@
+{
+  "_readme": "Every image slot on the site. To use a real asset: put the file in src/assets/..., set 'src' to its path, set 'width'/'height', write 'alt', and set 'placeholder' to false. While 'src' is empty the site shows a clearly labelled placeholder instead. See ASSETS.md for sizes.",
+  "rollabopLogo": {
+    "src": "/assets/brand/rollabop-wordmark.webp",
+    "alt": "Rollabop",
+    "width": 1164,
+    "height": 352,
+    "placeholder": true,
+    "note": "INTERIM: lettering, gold ball and swash lifted from the approved reference image (brand-source/rollabop-wordmark-reference.png, only 596px wide, bottom of the 'p' cropped). Replace with the clean master: transparent SVG, or PNG/WebP at least 2400px wide. Keep alt as 'Rollabop'."
+  },
+  "lippyLogo": {
+    "src": "",
+    "alt": "Lippy Robotics Labs",
+    "width": 0,
+    "height": 0,
+    "placeholder": true,
+    "note": "Official Lippy Robotics Labs logo (SVG preferred). Until supplied, the name is set in text."
+  },
+  "appIcon": {
+    "src": "",
+    "alt": "Rollabop app icon",
+    "width": 512,
+    "height": 512,
+    "placeholder": true,
+    "note": "512x512 PNG. Also used for the social preview image when set."
+  },
+  "heroArt": {
+    "src": "",
+    "alt": "A tall walnut Rollabop tray with brass trim, holding a settled pile of glowing glass balls and one Galaxy Ball.",
+    "width": 0,
+    "height": 0,
+    "placeholder": true,
+    "note": "Optional official hero render. Until supplied, the hero uses the site's built-in tray illustration."
+  },
+  "galaxyBall": {
+    "src": "",
+    "alt": "A clear glass Galaxy Ball holding a miniature spiral galaxy.",
+    "width": 0,
+    "height": 0,
+    "placeholder": true,
+    "note": "Official Galaxy Ball artwork, square, transparent background, at least 1200px. Until supplied, an interim illustration is shown and labelled."
+  },
+  "googlePlayBadge": {
+    "src": "",
+    "alt": "Get it on Google Play",
+    "width": 0,
+    "height": 0,
+    "placeholder": true,
+    "note": "Official Google Play badge from Google's badge generator. Only shown once release.playStoreUrl is set."
+  },
+  "screenshots": {
+    "gameplay1": {
+      "src": "",
+      "alt": "",
+      "width": 1080,
+      "height": 2400,
+      "placeholder": true,
+      "label": "Gameplay screenshot",
+      "note": "A full tray mid-level, showing the pile."
+    },
+    "gameplay2": {
+      "src": "",
+      "alt": "",
+      "width": 1080,
+      "height": 2400,
+      "placeholder": true,
+      "label": "Gameplay screenshot",
+      "note": "A match or cascade in progress."
+    },
+    "titleScreen": {
+      "src": "",
+      "alt": "",
+      "width": 1080,
+      "height": 2400,
+      "placeholder": true,
+      "label": "Title screen",
+      "note": "The Rollabop title screen."
+    },
+    "levelSelect": {
+      "src": "",
+      "alt": "",
+      "width": 1080,
+      "height": 2400,
+      "placeholder": true,
+      "label": "Level select",
+      "note": "The real level-select screen, once built."
+    }
+  }
+}

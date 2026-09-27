@@ -1,0 +1,62 @@
+{#- The interim Galaxy Ball interior, defined once per page and reused with <use>.
+    Replace with official artwork via assets.json (galaxyBall). -#}
+<svg class="svg-defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <radialGradient id="gx-space" cx="0" cy="0" r="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#23357f"/>
+      <stop offset=".38" stop-color="#101a4d"/>
+      <stop offset=".75" stop-color="#060a22"/>
+      <stop offset="1" stop-color="#020309"/>
+    </radialGradient>
+    <radialGradient id="gx-core" cx="0" cy="0" r="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".18" stop-color="#fff3d9" stop-opacity=".95"/>
+      <stop offset=".45" stop-color="#b9cfff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#5670ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gx-fade" cx="0" cy="0" r="82" gradientUnits="userSpaceOnUse">
+      <stop offset=".2" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="gx-fade-mask"><circle r="90" fill="url(#gx-fade)"/></mask>
+    <filter id="gx-nebula" x="-60%" y="-60%" width="220%" height="220%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="4" seed="9" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .42  0 0 0 0 .38  0 0 0 0 1  2.4 0 0 0 -1.05"/>
+    </filter>
+    <filter id="gx-nebula-warm" x="-60%" y="-60%" width="220%" height="220%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="3" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .95  0 0 0 0 .55  0 0 0 0 .85  0 2.6 0 0 -1.45"/>
+    </filter>
+    <filter id="gx-blur"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="gx-blur-sm"><feGaussianBlur stdDeviation="1.6"/></filter>
+
+    <symbol id="galaxy-interior" viewBox="-100 -100 200 200">
+      <circle r="100" fill="url(#gx-space)"/>
+      {%- for st in galaxy.fieldStars %}
+      <circle cx="{{ st.x }}" cy="{{ st.y }}" r="{{ st.r }}" fill="#fff" opacity="{{ st.o }}"/>
+      {%- endfor %}
+      <g transform="rotate(-28) scale(1 .64)">
+        <g mask="url(#gx-fade-mask)">
+          <rect x="-100" y="-100" width="200" height="200" filter="url(#gx-nebula)"/>
+          <rect x="-100" y="-100" width="200" height="200" filter="url(#gx-nebula-warm)" opacity=".7"/>
+        </g>
+        <g fill="none" stroke-linecap="round" filter="url(#gx-blur)">
+          {%- for arm in galaxy.arms %}
+          <path d="{{ arm }}" stroke="#8fb0ff" stroke-width="13" opacity=".55"/>
+          <path d="{{ arm }}" stroke="#d8b8ff" stroke-width="5" opacity=".5"/>
+          {%- endfor %}
+        </g>
+        <g fill="none" stroke-linecap="round" filter="url(#gx-blur-sm)">
+          {%- for arm in galaxy.arms %}
+          <path d="{{ arm }}" stroke="#e9f0ff" stroke-width="1.6" opacity=".55"/>
+          {%- endfor %}
+        </g>
+        {%- for st in galaxy.armStars %}
+        <circle cx="{{ st.x }}" cy="{{ st.y }}" r="{{ st.r }}" fill="#fff" opacity="{{ st.o }}"/>
+        {%- endfor %}
+        <ellipse rx="32" ry="30" fill="url(#gx-core)"/>
+        <circle r="3.2" fill="#fff"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>

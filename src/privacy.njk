@@ -1,0 +1,78 @@
+---
+layout: base.njk
+title: Privacy Policy
+description: Privacy information for Rollabop and this website.
+pageClass: privacy
+permalink: /privacy/
+---
+{%- import "macros.njk" as ui -%}
+{%- set draft = site.privacy.status != "final" -%}
+<section class="page-hero">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow">Legal</p>
+    <h1 class="page-title">Privacy Policy</h1>
+    {%- if site.privacy.lastUpdated %}<p class="muted">Last updated: {{ site.privacy.lastUpdated }}</p>{% endif %}
+  </div>
+</section>
+
+<div class="wrap wrap--narrow">
+  {%- if draft %}
+  <aside class="notice" role="note" aria-labelledby="draft-title">
+    <h2 id="draft-title" class="notice__title">Draft: needs final review before publication</h2>
+    <p>This policy is not final. Sections marked <span class="tag">To be confirmed</span> describe what the final policy must cover. They are not statements about how the Rollabop app handles data. The final policy will be published before Rollabop is released.</p>
+  </aside>
+  {%- endif %}
+
+  <article class="legal">
+    <section>
+      <h2>Who we are</h2>
+      <p>Rollabop is a game by {{ site.studio }} ("we", "us"). This policy will explain what information the Rollabop app and this website handle, and why.</p>
+    </section>
+
+    <section>
+      <h2>This website</h2>
+      <p>This website is built to collect as little as possible:</p>
+      <ul>
+        <li>It uses no cookies, analytics, advertising or tracking scripts.</li>
+        <li>It has no accounts, sign-ups or forms.</li>
+        <li>Its fonts and images are served from this site, not from third-party services.</li>
+      </ul>
+      <p>Like any website, the service that hosts it may keep standard technical logs, such as IP addresses, for security and reliability. {{ ui.tag("To be confirmed") }} The hosting provider and its policy will be named here.</p>
+    </section>
+
+    <section>
+      <h2>The Rollabop app {{ ui.tag("To be confirmed") }}</h2>
+      <p>The final policy will state clearly:</p>
+      <ul>
+        <li>What information, if any, the app collects, and why.</li>
+        <li>Whether any information leaves your device, and where it goes.</li>
+        <li>Any third-party services used, such as for optional ads or purchases, and links to their policies.</li>
+        <li>How long any information is kept.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Children {{ ui.tag("To be confirmed") }}</h2>
+      <p>How Rollabop approaches younger players will be described here.</p>
+    </section>
+
+    <section>
+      <h2>Your choices and rights {{ ui.tag("To be confirmed") }}</h2>
+      <p>How you can access, correct or delete any information, and your rights where you live, will be described here.</p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the updated version will be published on this page with a new "last updated" date.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      {%- if site.supportEmail %}
+      <p>Questions about privacy: <a href="mailto:{{ site.supportEmail }}?subject=Rollabop%20privacy">{{ site.supportEmail }}</a></p>
+      {%- else %}
+      <p>A contact for privacy questions will be published here before release. {{ ui.tag("To be confirmed") }}</p>
+      {%- endif %}
+    </section>
+  </article>
+</div>

@@ -1,0 +1,185 @@
+---
+layout: base.njk
+pageClass: home
+---
+{%- import "macros.njk" as ui -%}
+{%- set c = copy -%}
+{% include "partials/galaxy-defs.njk" %}
+
+{#- 1. HERO -#}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="hero__studio">{{ c.hero.eyebrow }}</p>
+      <h1 id="hero-title" class="hero__logo">{{ ui.wordmark(assets, "wordmark--hero", true) }}</h1>
+      <p class="hero__headline">{{ c.hero.headline }}</p>
+      <p class="hero__body">{{ c.hero.body }}</p>
+      <div class="hero__actions">
+        {{ ui.playCta(site, assets) }}
+        <a class="text-link" href="{{ c.hero.secondaryHref }}">{{ c.hero.secondaryLabel }}<span aria-hidden="true" class="text-link__arrow">&rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="hero__stage">
+      {%- if assets.heroArt.src %}
+      <img class="hero__art" src="{{ assets.heroArt.src }}" alt="{{ assets.heroArt.alt }}" width="{{ assets.heroArt.width }}" height="{{ assets.heroArt.height }}" fetchpriority="high">
+      {%- else %}
+      <div class="tray" role="img" aria-label="{{ assets.heroArt.alt }}">
+        <div class="tray__frame">
+        <div class="tray__trim" aria-hidden="true"></div>
+        <div class="tray__board">
+          <div class="tray__balls" style="--size: {{ tray.size }}%">
+            {%- for b in tray.balls %}
+            {%- set pos = "left:" + b.left + "%;bottom:" + b.bottom + "%" %}
+            {%- if b.color == "galaxy" %}{{ ui.galaxyBall("tray__galaxy", pos) }}{% else %}{{ ui.ball(b.color, "", pos) }}{% endif %}
+            {%- endfor %}
+          </div>
+        </div>
+        </div>
+      </div>
+      <p class="art-note">Website illustration · official game art coming soon</p>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+{#- 2. WHAT IS ROLLABOP -#}
+<section class="section what" aria-labelledby="what-title">
+  <div class="wrap">
+    <div class="what__grid">
+      <div class="what__text" data-reveal>
+        {{ ui.heading(c.whatIs.eyebrow, c.whatIs.title, "what-title") }}
+        <p class="lead">{{ c.whatIs.intro }}</p>
+        <ul class="features" role="list">
+          {%- for f in c.whatIs.features %}
+          <li class="feature">
+            {{ ui.ball(f.color, "feature__ball") }}
+            <h3 class="feature__name">{{ f.name }}</h3>
+            <p class="feature__text">{{ f.text }}</p>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div class="what__shots" data-reveal>
+        {{ ui.shot(assets.screenshots.gameplay1, "shot--lead") }}
+        {{ ui.shot(assets.screenshots.gameplay2, "shot--second") }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{#- 3. HOW IT PLAYS -#}
+<section class="section how" id="how-it-plays" aria-labelledby="how-title">
+  <div class="wrap">
+    <div data-reveal>{{ ui.heading(c.howItPlays.eyebrow, c.howItPlays.title, "how-title") }}</div>
+    <ol class="steps" role="list">
+      {%- for s in c.howItPlays.steps %}
+      <li class="step" data-reveal>
+        {{ ui.diagram(s.diagram, "Diagram: " + s.title, "step" + loop.index) }}
+        <div class="step__text">
+          <p class="step__num" aria-hidden="true">{{ "0" + loop.index }}</p>
+          <h3 class="step__title">{{ s.title }}</h3>
+          <p>{{ s.text }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+    <div class="how__principles" data-reveal>
+      <div class="no-grid">
+        <h3 class="no-grid__title">{{ c.howItPlays.noGrid.title }}</h3>
+        <p>{{ c.howItPlays.noGrid.text }}</p>
+      </div>
+      <p class="principle">{{ c.howItPlays.principle }}</p>
+    </div>
+    <p class="how__more" data-reveal><a class="btn" href="/how-to-play/">Read the full guide</a></p>
+  </div>
+</section>
+
+{#- 4. GALAXY BALLS -#}
+<section class="section galaxy" id="galaxy-balls" aria-labelledby="galaxy-title">
+  <div class="wrap galaxy__grid">
+    <div class="galaxy__stage" data-reveal>
+      <div class="galaxy__halo" aria-hidden="true"></div>
+      {%- if assets.galaxyBall.src %}
+      <img class="galaxy__art" src="{{ assets.galaxyBall.src }}" alt="{{ assets.galaxyBall.alt }}" width="{{ assets.galaxyBall.width }}" height="{{ assets.galaxyBall.height }}" loading="lazy" decoding="async">
+      {%- else %}
+      <div class="galaxy__hero" role="img" aria-label="{{ assets.galaxyBall.alt }}">{{ ui.galaxyBall("galaxy__ball") }}</div>
+      {%- endif %}
+      <div class="galaxy__stand" aria-hidden="true"></div>
+      {%- if not assets.galaxyBall.src %}
+      <p class="art-note">Interim illustration · official Galaxy Ball artwork coming soon</p>
+      {%- endif %}
+    </div>
+    <div class="galaxy__text" data-reveal>
+      {{ ui.heading(c.galaxy.eyebrow, c.galaxy.title, "galaxy-title") }}
+      <p class="lead">{{ c.galaxy.body }}</p>
+      <p class="galaxy__fair">{{ c.galaxy.fairness }}</p>
+      <p class="small muted">{{ c.galaxy.note }}</p>
+    </div>
+  </div>
+</section>
+
+{#- 5. LEVELS -#}
+<section class="section levels" aria-labelledby="levels-title">
+  <div class="wrap levels__grid">
+    <div class="levels__text" data-reveal>
+      {{ ui.heading(c.levels.eyebrow, c.levels.title, "levels-title") }}
+      <p class="lead">{{ c.levels.intro }}</p>
+      <ul class="brass-list" role="list">
+        {%- for i in c.levels.items %}
+        <li><h3 class="brass-list__name">{{ i.name }} {{ ui.tag(i.tag) }}</h3><p>{{ i.text }}</p></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="levels__shot" data-reveal>
+      {{ ui.shot(assets.screenshots.levelSelect) }}
+    </div>
+  </div>
+</section>
+
+{#- 6. PLAYER-FIRST -#}
+<section class="section respect" aria-labelledby="respect-title">
+  <div class="wrap wrap--narrow">
+    <div data-reveal>{{ ui.heading(c.respect.eyebrow, c.respect.title, "respect-title") }}</div>
+    <ul class="respect__lines" role="list" data-reveal>
+      {%- for line in c.respect.lines %}
+      <li>{{ line }}</li>
+      {%- endfor %}
+    </ul>
+    <blockquote class="respect__promise" data-reveal><p>{{ c.respect.promise }}</p></blockquote>
+    <p class="respect__note muted" data-reveal>{{ c.respect.note }}</p>
+  </div>
+</section>
+
+{#- 7. ACCESSIBILITY -#}
+<section class="section access" aria-labelledby="access-title">
+  <div class="wrap">
+    <div class="access__head" data-reveal>
+      {{ ui.heading(c.accessibility.eyebrow, c.accessibility.title, "access-title") }}
+      <p class="lead">{{ c.accessibility.intro }}</p>
+    </div>
+    <ul class="access__list" role="list" data-reveal>
+      {%- for i in c.accessibility.items %}
+      <li><h3>{{ i.name }}</h3><p>{{ i.text }}</p></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{#- 8. STUDIO -#}
+<section class="section studio" aria-labelledby="studio-title">
+  <div class="wrap wrap--narrow studio__inner" data-reveal>
+    <p class="eyebrow">{{ c.studio.eyebrow }}</p>
+    <h2 id="studio-title" class="studio__mark">{{ ui.studiomark(assets, "studiomark--large") }}</h2>
+    <p class="studio__text">{{ c.studio.text }}</p>
+    <a class="text-link" href="/about/">About Rollabop<span aria-hidden="true" class="text-link__arrow">&rarr;</span></a>
+  </div>
+</section>
+
+{#- Closing -#}
+<section class="section closing" aria-labelledby="closing-title">
+  <div class="wrap wrap--narrow closing__inner" data-reveal>
+    <h2 id="closing-title" class="closing__title">{{ site.tagline }}</h2>
+    {{ ui.playCta(site, assets) }}
+  </div>
+</section>

@@ -1,0 +1,91 @@
+{%- import "macros.njk" as ui -%}
+{%- set pageTitle = (title + " · " + site.name) if title else (site.name + " · " + site.tagline) -%}
+{%- set pageDesc = description or site.description -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <meta name="theme-color" content="#0d0a08">
+  <meta name="color-scheme" content="dark">
+  {%- if noindex or (pageClass == 'privacy' and site.privacy.status != 'final') %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
+  {%- if site.url %}
+  <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}">
+  <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}">
+  {%- if assets.appIcon.src %}
+  <meta property="og:image" content="{{ assets.appIcon.src | absoluteUrl(site.url) }}">
+  {%- endif %}
+  {%- endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
+  {%- if assets.appIcon.src %}
+  <link rel="icon" href="{{ assets.appIcon.src }}">
+  <link rel="apple-touch-icon" href="{{ assets.appIcon.src }}">
+  {%- else %}
+  <link rel="icon" href="/assets/icons/favicon-placeholder.svg" type="image/svg+xml">
+  {%- endif %}
+  <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.rollabop)document.documentElement.classList.remove("js")},2500);</script>
+  <script src="/js/site.js" defer></script>
+</head>
+<body class="page-{{ pageClass or 'default' }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="site-brand" href="/" aria-label="{{ site.name }} home">{{ ui.wordmark(assets, "wordmark--small") }}</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          {%- for item in nav %}
+          <li><a href="{{ item.href }}"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a href="/" class="site-footer__logo" aria-label="{{ site.name }} home">{{ ui.wordmark(assets, "wordmark--footer") }}</a>
+          <p class="site-footer__by">A game by {{ ui.studiomark(assets, "studiomark--footer") }}</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="/how-to-play/">How to Play</a></li>
+            <li><a href="/support/">Support</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/about/">About</a></li>
+            {%- if site.release.playStoreUrl %}
+            <li><a href="{{ site.release.playStoreUrl }}" rel="noopener">Google Play</a></li>
+            {%- endif %}
+            {%- for s in site.social %}
+            <li><a href="{{ s.url }}" rel="noopener me">{{ s.label }}</a></li>
+            {%- endfor %}
+          </ul>
+        </nav>
+      </div>
+      <p class="site-footer__legal">&copy; {{ site.copyrightYear }} {{ site.studio }}. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

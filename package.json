@@ -1,0 +1,17 @@
+{
+  "name": "rollabop-website",
+  "private": true,
+  "description": "Official website for Rollabop, a game by Lippy Robotics Labs.",
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "tray": "node scripts/generate-tray.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

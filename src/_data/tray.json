@@ -1,0 +1,256 @@
+{
+ "seed": 11,
+ "size": 13.514,
+ "balls": [
+  {
+   "left": 45.11,
+   "bottom": 50.36,
+   "color": "red"
+  },
+  {
+   "left": 86.49,
+   "bottom": 49.17,
+   "color": "purple"
+  },
+  {
+   "left": 25.1,
+   "bottom": 44.91,
+   "color": "galaxy"
+  },
+  {
+   "left": 53.09,
+   "bottom": 43.95,
+   "color": "purple"
+  },
+  {
+   "left": 38.39,
+   "bottom": 43.47,
+   "color": "gold"
+  },
+  {
+   "left": 66.28,
+   "bottom": 42.29,
+   "color": "red"
+  },
+  {
+   "left": 79.79,
+   "bottom": 42.27,
+   "color": "green"
+  },
+  {
+   "left": 6.81,
+   "bottom": 42.12,
+   "color": "red"
+  },
+  {
+   "left": 18.38,
+   "bottom": 38.01,
+   "color": "purple"
+  },
+  {
+   "left": 46.38,
+   "bottom": 37.06,
+   "color": "blue"
+  },
+  {
+   "left": 31.65,
+   "bottom": 36.57,
+   "color": "red"
+  },
+  {
+   "left": 86.49,
+   "bottom": 35.4,
+   "color": "red"
+  },
+  {
+   "left": 73.03,
+   "bottom": 35.39,
+   "color": "blue"
+  },
+  {
+   "left": 59.56,
+   "bottom": 35.39,
+   "color": "green"
+  },
+  {
+   "left": 0,
+   "bottom": 35.26,
+   "color": "purple"
+  },
+  {
+   "left": 11.73,
+   "bottom": 31.1,
+   "color": "green"
+  },
+  {
+   "left": 39.68,
+   "bottom": 30.17,
+   "color": "blue"
+  },
+  {
+   "left": 25,
+   "bottom": 29.67,
+   "color": "gold"
+  },
+  {
+   "left": 66.32,
+   "bottom": 28.51,
+   "color": "blue"
+  },
+  {
+   "left": 52.84,
+   "bottom": 28.5,
+   "color": "green"
+  },
+  {
+   "left": 79.84,
+   "bottom": 28.5,
+   "color": "blue"
+  },
+  {
+   "left": 0,
+   "bottom": 27.32,
+   "color": "green"
+  },
+  {
+   "left": 33.02,
+   "bottom": 23.29,
+   "color": "purple"
+  },
+  {
+   "left": 11.4,
+   "bottom": 23.16,
+   "color": "blue"
+  },
+  {
+   "left": 86.49,
+   "bottom": 21.62,
+   "color": "blue"
+  },
+  {
+   "left": 73.09,
+   "bottom": 21.62,
+   "color": "gold"
+  },
+  {
+   "left": 59.63,
+   "bottom": 21.62,
+   "color": "blue"
+  },
+  {
+   "left": 46.21,
+   "bottom": 21.6,
+   "color": "green"
+  },
+  {
+   "left": 0,
+   "bottom": 18.86,
+   "color": "purple"
+  },
+  {
+   "left": 22.32,
+   "bottom": 18.6,
+   "color": "red"
+  },
+  {
+   "left": 86.49,
+   "bottom": 13.7,
+   "color": "blue"
+  },
+  {
+   "left": 59.66,
+   "bottom": 13.7,
+   "color": "blue"
+  },
+  {
+   "left": 73.07,
+   "bottom": 13.69,
+   "color": "purple"
+  },
+  {
+   "left": 46.21,
+   "bottom": 13.68,
+   "color": "purple"
+  },
+  {
+   "left": 32.79,
+   "bottom": 13.66,
+   "color": "green"
+  },
+  {
+   "left": 12.8,
+   "bottom": 13.07,
+   "color": "gold"
+  },
+  {
+   "left": 0,
+   "bottom": 10.91,
+   "color": "purple"
+  },
+  {
+   "left": 25.92,
+   "bottom": 6.85,
+   "color": "gold"
+  },
+  {
+   "left": 52.89,
+   "bottom": 6.82,
+   "color": "red"
+  },
+  {
+   "left": 79.85,
+   "bottom": 6.81,
+   "color": "blue"
+  },
+  {
+   "left": 66.36,
+   "bottom": 6.81,
+   "color": "red"
+  },
+  {
+   "left": 39.47,
+   "bottom": 6.8,
+   "color": "green"
+  },
+  {
+   "left": 9.7,
+   "bottom": 5.4,
+   "color": "blue"
+  },
+  {
+   "left": 32.72,
+   "bottom": 0,
+   "color": "red"
+  },
+  {
+   "left": 46.15,
+   "bottom": 0,
+   "color": "blue"
+  },
+  {
+   "left": 73.11,
+   "bottom": 0,
+   "color": "gold"
+  },
+  {
+   "left": 0,
+   "bottom": 0,
+   "color": "purple"
+  },
+  {
+   "left": 19.33,
+   "bottom": 0,
+   "color": "red"
+  },
+  {
+   "left": 86.49,
+   "bottom": 0,
+   "color": "red"
+  },
+  {
+   "left": 59.6,
+   "bottom": 0,
+   "color": "purple"
+  }
+ ]
+}
