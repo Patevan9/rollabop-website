@@ -45,6 +45,43 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
+  // Support form: send without leaving the page (without JS it posts normally)
+  var form = document.getElementById("support-form");
+  if (form && window.fetch && window.FormData) {
+    var status = form.querySelector(".form-status");
+    var button = form.querySelector('button[type="submit"]');
+    var show = function (msg, isError) {
+      status.hidden = false;
+      status.textContent = msg;
+      status.classList.toggle("is-error", !!isError);
+    };
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var invalid = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (el) {
+        var bad = !el.checkValidity();
+        el.setAttribute("aria-invalid", String(bad));
+        return bad;
+      });
+      if (invalid.length) {
+        show("Please fill in your email, a category and your message.", true);
+        invalid[0].focus();
+        return;
+      }
+      button.disabled = true;
+      show("Sending…");
+      fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+        .then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          form.reset();
+          show("Message sent. Thank you for reaching out. We will get back to you as soon as we can.");
+        })
+        .catch(function () {
+          show("Sorry, the message could not be sent. Please try again, or email us instead.", true);
+        })
+        .then(function () { button.disabled = false; });
+    });
+  }
+
   // Slight depth on the hero tray (mouse/trackpad only)
   var hero = document.querySelector(".hero");
   if (hero && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {

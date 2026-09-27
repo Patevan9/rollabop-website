@@ -65,8 +65,14 @@ permalink: /support/
 
   <section class="panel panel--contact" aria-labelledby="contact">
     <h2 id="contact">Contact support</h2>
+    {%- if site.supportForm.formspreeId %}
+    <p>Fill in as much detail as you can. The more you share, the faster we can help.</p>
+    {% include "partials/support-form.njk" %}
     {%- if site.supportEmail %}
-    <p>Email us and we will get back to you as soon as we can.</p>
+    <p class="form-alt">Prefer plain email? <a href="mailto:{{ site.supportEmail }}?subject=Rollabop%20support">{{ site.supportEmail }}</a></p>
+    {%- endif %}
+    {%- elif site.supportEmail %}
+    <p>Email us and we will get back to you as soon as we can. It helps to include your device, Android version, Rollabop version, and what happened.</p>
     <p><a class="btn btn--primary" href="mailto:{{ site.supportEmail }}?subject=Rollabop%20support">{{ site.supportEmail }}</a></p>
     {%- else %}
     <p>A support contact will be published here before Rollabop's release.</p>

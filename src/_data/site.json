@@ -21,8 +21,13 @@
   "version": "",
   "_version_note": "Current game version, e.g. 1.0.0. Leave empty before release; the About page then says 'Not yet released'.",
 
-  "supportEmail": "",
+  "supportEmail": "lippyroboticslabs@gmail.com",
   "_supportEmail_note": "Official support address. Leave empty until you have one; the Support page then says a contact is coming soon.",
+
+  "supportForm": {
+    "formspreeId": "",
+    "_note": "The Support page's 'Get Help' form sends messages through Formspree (formspree.io), like the Tolliver site. Create a form in Formspree for Rollabop and paste its ID here (the part after /f/, e.g. 'abcdwxyz'). Leave empty to hide the form; the Support page then shows the email address only. When set, the Privacy page automatically mentions Formspree."
+  },
 
   "social": [],
   "_social_note": "Official community links only, e.g. { \"label\": \"YouTube\", \"url\": \"https://...\" }. Empty list shows nothing.",

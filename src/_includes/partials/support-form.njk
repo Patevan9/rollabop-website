@@ -1,0 +1,57 @@
+{#- The Get Help form. Sends through Formspree (site.json → supportForm.formspreeId).
+    Works without JavaScript (a normal form post); with JavaScript it stays on this page. -#}
+<form class="support-form" id="support-form" action="https://formspree.io/f/{{ site.supportForm.formspreeId }}" method="POST" novalidate>
+  <input type="hidden" name="_subject" value="Rollabop Support Request">
+  <p class="visually-hidden" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+
+  <fieldset>
+    <legend>Your information</legend>
+    <div class="field-row">
+      <p class="field"><label for="sf-name">Name <span class="optional">(optional)</span></label>
+        <input id="sf-name" name="name" type="text" autocomplete="name"></p>
+      <p class="field"><label for="sf-email">Email</label>
+        <input id="sf-email" name="email" type="email" autocomplete="email" required></p>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>What can we help you with?</legend>
+    <p class="field"><label for="sf-category">Category</label>
+      <select id="sf-category" name="category" required>
+        <option value="">Select one…</option>
+        <option>Bug report</option>
+        <option>Question</option>
+        <option>Feedback</option>
+        <option>Feature request</option>
+        <option>Accessibility</option>
+      </select></p>
+    <p class="field"><label for="sf-message">Describe your question or issue</label>
+      <textarea id="sf-message" name="message" rows="6" required></textarea></p>
+    <p class="field"><label for="sf-expected">What did you expect to happen? <span class="optional">(optional)</span></label>
+      <textarea id="sf-expected" name="expected" rows="3"></textarea></p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Device info <span class="optional">(optional, but really helpful)</span></legend>
+    <div class="field-row">
+      <p class="field"><label for="sf-device">Device</label>
+        <input id="sf-device" name="device" type="text" placeholder="e.g. Pixel 8"></p>
+      <p class="field"><label for="sf-android">Android version</label>
+        <input id="sf-android" name="android_version" type="text" placeholder="e.g. 15"></p>
+    </div>
+    <p class="field"><label for="sf-version">Rollabop version</label>
+      <input id="sf-version" name="rollabop_version" type="text"></p>
+  </fieldset>
+
+  <fieldset class="choices">
+    <legend>Can you make it happen again? <span class="optional">(optional)</span></legend>
+    <label><input type="radio" name="reproducible" value="Always"> Always: it happens every time</label>
+    <label><input type="radio" name="reproducible" value="Sometimes"> Sometimes: now and then</label>
+    <label><input type="radio" name="reproducible" value="Only once"> Only once</label>
+    <label><input type="radio" name="reproducible" value="Not sure"> Not sure</label>
+  </fieldset>
+
+  <p class="form-status" role="status" aria-live="polite" hidden></p>
+  <p><button class="btn btn--primary" type="submit">Send message</button></p>
+  <p class="small muted">Your message is sent through Formspree to our support inbox. See our <a href="/privacy/">Privacy Policy</a>.</p>
+</form>

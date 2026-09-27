@@ -34,9 +34,15 @@ permalink: /privacy/
       <p>This website is built to collect as little as possible:</p>
       <ul>
         <li>It uses no cookies, analytics, advertising or tracking scripts.</li>
-        <li>It has no accounts, sign-ups or forms.</li>
+        <li>It has no accounts or sign-ups.</li>
         <li>Its fonts and images are served from this site, not from third-party services.</li>
+        {%- if not site.supportForm.formspreeId %}
+        <li>It has no forms. If you email us, we receive only what you choose to send.</li>
+        {%- endif %}
       </ul>
+      {%- if site.supportForm.formspreeId %}
+      <p><strong>The support form.</strong> If you use the form on the <a href="/support/">Support page</a>, what you type (your email address, message and any optional device details) is sent to us through <a href="https://formspree.io/legal/privacy-policy" rel="noopener">Formspree</a>, a form-handling service, and forwarded to our support inbox. It is used only to answer your request. {{ ui.tag("To be confirmed") }} How long messages are kept will be stated here.</p>
+      {%- endif %}
       <p>Like any website, the service that hosts it may keep standard technical logs, such as IP addresses, for security and reliability. {{ ui.tag("To be confirmed") }} The hosting provider and its policy will be named here.</p>
     </section>
 
