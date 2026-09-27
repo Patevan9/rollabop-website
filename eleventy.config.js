@@ -6,6 +6,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets", "src/js": "js" });
+  // Search-engine ownership files (e.g. Google Search Console), served exactly as provided.
+  eleventyConfig.addPassthroughCopy("src/google*.html");
   eleventyConfig.ignores.add("src/assets/**");
 
   // True when an asset slot has a real file.
