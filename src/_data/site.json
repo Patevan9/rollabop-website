@@ -8,7 +8,7 @@
   "description": "Rollabop is a physics puzzle game for Android. Reach into a living pile of balls, rearrange it under gravity, build larger matches, and discover the move that changes everything.",
   "copyrightYear": 2026,
 
-  "url": "",
+  "url": "https://patevan9.github.io/rollabop-website",
   "_url_note": "Your domain, e.g. https://rollabop.com (no trailing slash). Leave empty until you have one. When set, the site adds canonical links, social preview URLs and a sitemap.",
 
   "release": {
