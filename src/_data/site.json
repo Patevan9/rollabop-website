@@ -26,7 +26,7 @@
 
   "supportForm": {
     "formspreeId": "mqevwnjl",
-    "_note": "The Support page's 'Get Help' form sends messages through Formspree (formspree.io), like the Tolliver site. Create a form in Formspree for Rollabop and paste its ID here (the part after /f/, e.g. 'abcdwxyz'). Leave empty to hide the form; the Support page then shows the email address only. When set, the Privacy page automatically mentions Formspree."
+    "_note": "The Support page's 'Get Help' form sends messages through Formspree (formspree.io), like the Tolliver site. Uses the same Formspree form as the Tolliver support page; Rollabop messages arrive with the subject \"Rollabop Support Request\". To use a separate form, paste its ID here (the part after /f/, e.g. 'abcdwxyz'). Leave empty to hide the form; the Support page then shows the email address only. When set, the Privacy page automatically mentions Formspree."
   },
 
   "social": [],
