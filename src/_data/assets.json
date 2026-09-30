@@ -1,12 +1,26 @@
 {
   "_readme": "Every image slot on the site. To use a real asset: put the file in src/assets/..., set 'src' to its path, set 'width'/'height', write 'alt', and set 'placeholder' to false. While 'src' is empty the site shows a clearly labelled placeholder instead. See ASSETS.md for sizes.",
   "rollabopLogo": {
-    "src": "/assets/brand/rollabop-wordmark.webp",
+    "src": "/assets/brand/rollabop-wordmark-960.webp",
+    "srcset": [
+      {
+        "src": "/assets/brand/rollabop-wordmark-480.webp",
+        "w": 480
+      },
+      {
+        "src": "/assets/brand/rollabop-wordmark-960.webp",
+        "w": 960
+      },
+      {
+        "src": "/assets/brand/rollabop-wordmark-1280.webp",
+        "w": 1280
+      }
+    ],
     "alt": "Rollabop",
-    "width": 1164,
-    "height": 352,
-    "placeholder": true,
-    "note": "INTERIM: lettering, gold ball and swash lifted from the approved reference image (brand-source/rollabop-wordmark-reference.png, only 596px wide, bottom of the 'p' cropped). Replace with the clean master: transparent SVG, or PNG/WebP at least 2400px wide. Keep alt as 'Rollabop'."
+    "width": 960,
+    "height": 286,
+    "placeholder": false,
+    "note": "Official wordmark, made from the transparent master in brand-source/rollabop-wordmark-master.png (2172x724). To update: replace the master, then export 480/960/1280px-wide WebP versions."
   },
   "lippyLogo": {
     "src": "",

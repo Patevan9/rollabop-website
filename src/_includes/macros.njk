@@ -3,8 +3,17 @@
 {#- The Rollabop name/logo. Uses the official logo once assets.json has it. -#}
 {#- The image's alt text ("Rollabop") is the accessible, searchable name. -#}
 {% macro wordmark(assets, cls="", priority=false) %}
-  {%- if assets.rollabopLogo.src -%}
-    <img class="wordmark-img {{ cls }}" src="{{ assets.rollabopLogo.src }}" alt="{{ assets.rollabopLogo.alt }}" width="{{ assets.rollabopLogo.width }}" height="{{ assets.rollabopLogo.height }}"{% if priority %} fetchpriority="high"{% else %} decoding="async"{% endif %}>
+  {#- How wide each placement shows the logo, so phones fetch the smallest file that stays sharp -#}
+  {%- set wordmarkSizes = {
+    "wordmark--hero": "(min-width: 900px) 620px, (min-width: 600px) 560px, 90vw",
+    "wordmark--page": "460px",
+    "wordmark--footer": "176px",
+    "wordmark--small": "132px"
+  } -%}
+  {%- set logo = assets.rollabopLogo -%}
+  {%- if logo.src -%}
+    <img class="wordmark-img {{ cls }}" src="{{ logo.src }}"
+      {%- if logo.srcset %} srcset="{% for s in logo.srcset %}{{ s.src }} {{ s.w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="{{ wordmarkSizes[cls] or '100vw' }}"{% endif %} alt="{{ assets.rollabopLogo.alt }}" width="{{ assets.rollabopLogo.width }}" height="{{ assets.rollabopLogo.height }}"{% if priority %} fetchpriority="high"{% else %} decoding="async"{% endif %}>
   {%- else -%}
     <span class="wordmark {{ cls }}">Rollabop</span>
   {%- endif -%}

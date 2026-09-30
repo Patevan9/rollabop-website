@@ -11,7 +11,7 @@ To add a real asset:
 
 | Slot | Folder | Format & size | Currently shows |
 |------|--------|---------------|-----------------|
-| `rollabopLogo` | `src/assets/brand/` | Transparent SVG preferred, or PNG/WebP ≥ 2400px wide | **Interim** wordmark (`rollabop-wordmark.webp`) lifted from the approved reference. See note below |
+| `rollabopLogo` | `src/assets/brand/` | ✅ **Done**: official transparent master, served as 480/960/1280px WebP | Official wordmark |
 | `lippyLogo` | `src/assets/brand/` | SVG preferred, or transparent PNG | "Lippy Robotics Labs" in text |
 | `appIcon` | `src/assets/icons/` | 512×512 PNG | Placeholder favicon (`favicon-placeholder.svg`); no social image |
 | `galaxyBall` | `src/assets/galaxy/` | Square, transparent background, ≥ 1200px, WebP or PNG | Interim SVG illustration, labelled on the page |
@@ -22,18 +22,15 @@ To add a real asset:
 | `screenshots.titleScreen` | `src/assets/screenshots/` | as above | Reserved slot (not yet placed on a page) |
 | `googlePlayBadge` | `src/assets/store/` | Official badge from Google's badge generator | Hidden until `release.playStoreUrl` is set |
 
-### The Rollabop wordmark
+### The Rollabop wordmark ✅
 
-The approved direction is the gold script "Rollabop", with the gold ball as the second "o" and the long curved sweep underneath.
-The reference is kept in `brand-source/rollabop-wordmark-reference.png`. It is not published.
+The official transparent master is kept at `brand-source/rollabop-wordmark-master.png` (2172×724). It is not published.
+The site serves three sizes made from it (`src/assets/brand/rollabop-wordmark-480/960/1280.webp`), and each device picks the smallest one that stays sharp.
+To update the logo later: replace the master, export the three widths again, and keep `alt` as "Rollabop".
 
-The site currently uses `src/assets/brand/rollabop-wordmark.webp`. This was extracted from that reference: the wood background was removed and it was upscaled 2×.
-It looks right, but the source is only 596px wide, so it's slightly soft on high-density screens. The bottom of the "p" is also cropped, as it is in the reference.
+The earlier reference image is kept as `brand-source/rollabop-wordmark-reference.png` for the record.
 
-For the final version, supply a clean master with a transparent background: SVG, or PNG/WebP at least 2400px wide, with the full "p" descender.
-Drop it in `src/assets/brand/` and update `src`, `width` and `height` in `assets.json`. Keep `alt` as "Rollabop"; that is the text screen readers and search engines use.
-
-The wordmark is used only for the brand: the hero, header, footer and About page title. All headings and body text stay in the site typefaces.
+The wordmark is used only for the brand: the hero, header, footer and About page title.
 
 Also still to provide, in `src/_data/site.json`:
 
