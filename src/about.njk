@@ -21,6 +21,20 @@ permalink: /about/
     <p>{{ copy.studio.text }}</p>
   </section>
 
+  {%- set story = copy.studio.story %}
+  <section class="panel story" id="our-story" aria-labelledby="story-title">
+    <p class="eyebrow">Our story</p>
+    <h2 id="story-title" class="story__title">{{ story.title }}</h2>
+    {%- for para in story.paragraphs %}
+    {%- if para.highlight %}
+    <blockquote class="story__quote"><p>{{ para.text }}</p></blockquote>
+    {%- else %}
+    <p>{{ para.text }}</p>
+    {%- endif %}
+    {%- endfor %}
+    <p class="story__signature">— {{ story.signature }}</p>
+  </section>
+
   <section class="panel" aria-labelledby="about-details">
     <h2 id="about-details">Details</h2>
     <dl class="details">

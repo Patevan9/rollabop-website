@@ -415,7 +415,7 @@
 .panel ul, .panel ol { margin: 0 0 1em; }
 .panel li { margin-bottom: 0.45em; }
 .panel li::marker { color: var(--brass); }
-.prose-stack { display: grid; gap: 1.25rem; padding-bottom: var(--section); }
+.prose-stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; padding-bottom: var(--section); }
 
 .notice {
   margin-bottom: 2.5rem;

@@ -467,7 +467,42 @@
   },
   "studio": {
     "eyebrow": "The studio",
-    "text": "Rollabop is created by Lippy Robotics Labs, an independent studio exploring tactile games, local AI, robotics and technology."
+    "text": "Rollabop is created by Lippy Robotics Labs, an independent studio exploring tactile games, local AI, robotics and technology.",
+    "story": {
+      "_note": "Patrick's own words, shown on the About page. Paragraphs appear in order; the one marked \"highlight\": true is set larger as a pull quote.",
+      "title": "The story behind Lippy Robotics Labs",
+      "paragraphs": [
+        {
+          "text": "Lippy Robotics Labs began at home, not in a corporate office."
+        },
+        {
+          "text": "I'm Patrick Lippy. I'm not a professional programmer. I started building with AI, robotics and spare hardware because the technology I wanted to experience was often simply too expensive for our family."
+        },
+        {
+          "text": "My first major project began with an inexpensive robot kit and a repurposed Samsung phone. With help from AI collaborators, an experiment slowly became something real — something my wife, my son and I could actually use, test and care about."
+        },
+        {
+          "text": "That experience shaped Lippy Robotics Labs."
+        },
+        {
+          "text": "The goal is simple: build technology that feels thoughtful, useful and accessible without treating people like wallets.",
+          "highlight": true
+        },
+        {
+          "text": "Rollabop grew from that same philosophy."
+        },
+        {
+          "text": "It's a game designed to be beautiful and satisfying, but also fair. No surprise ads. No artificial frustration designed to force a purchase. Players should be able to enjoy and complete the game without spending money, while those who want to support its development can choose to do so."
+        },
+        {
+          "text": "Lippy Robotics Labs is still small. Rollabop is being built and tested with my family, one level at a time."
+        },
+        {
+          "text": "And that's exactly how I want it."
+        }
+      ],
+      "signature": "Patrick Lippy"
+    }
   },
   "howToPlay": {
     "title": "How to play",
