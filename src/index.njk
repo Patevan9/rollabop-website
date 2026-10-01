@@ -101,7 +101,7 @@ pageClass: home
     <div class="galaxy__stage" data-reveal>
       <div class="galaxy__halo" aria-hidden="true"></div>
       {%- if assets.galaxyBall.src %}
-      <img class="galaxy__art" src="{{ assets.galaxyBall.src }}" alt="{{ assets.galaxyBall.alt }}" width="{{ assets.galaxyBall.width }}" height="{{ assets.galaxyBall.height }}" loading="lazy" decoding="async">
+      <img class="galaxy__art" src="{{ assets.galaxyBall.src }}"{% if assets.galaxyBall.srcset %} srcset="{% for s in assets.galaxyBall.srcset %}{{ s.src }} {{ s.w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="min(78vw, 440px)"{% endif %} alt="{{ assets.galaxyBall.alt }}" width="{{ assets.galaxyBall.width }}" height="{{ assets.galaxyBall.height }}" loading="lazy" decoding="async">
       {%- else %}
       <div class="galaxy__hero" role="img" aria-label="{{ assets.galaxyBall.alt }}">{{ ui.galaxyBall("galaxy__ball") }}</div>
       {%- endif %}

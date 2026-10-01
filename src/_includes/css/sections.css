@@ -196,6 +196,11 @@
   pointer-events: none;
 }
 .galaxy__hero, .galaxy__art { position: relative; width: min(78vw, 440px); }
+.galaxy__art {
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgba(110, 140, 255, 0.28), 0 0 140px rgba(110, 140, 255, 0.12), 0 40px 50px -30px rgba(0, 0, 0, 0.9);
+}
 .galaxy__ball {
   width: 100%;
   font-size: 22px;

@@ -65,12 +65,22 @@
     "note": "Optional official hero render. Until supplied, the hero uses the site's built-in tray illustration."
   },
   "galaxyBall": {
-    "src": "",
-    "alt": "A clear glass Galaxy Ball holding a miniature spiral galaxy.",
-    "width": 0,
-    "height": 0,
-    "placeholder": true,
-    "note": "Official Galaxy Ball artwork, square, transparent background, at least 1200px. Until supplied, an interim illustration is shown and labelled."
+    "src": "/assets/galaxy/galaxy-ball-900.webp",
+    "srcset": [
+      {
+        "src": "/assets/galaxy/galaxy-ball-480.webp",
+        "w": 480
+      },
+      {
+        "src": "/assets/galaxy/galaxy-ball-900.webp",
+        "w": 900
+      }
+    ],
+    "alt": "A clear glass Galaxy Ball holding a glowing blue spiral galaxy.",
+    "width": 900,
+    "height": 900,
+    "placeholder": false,
+    "note": "Official Galaxy Ball artwork, cut out as a circle from brand-source/galaxy-ball-icon-source.png."
   },
   "googlePlayBadge": {
     "src": "",
