@@ -586,16 +586,17 @@
   opacity: 0;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .galaxy-art__sweep { opacity: 0.16; animation: galaxy-turn 48s linear infinite; }
-  .galaxy-art__core { animation: core-breathe 8s ease-in-out infinite alternate; }
-  .galaxy-art__star { animation: star-twinkle 7s ease-in-out infinite; animation-delay: var(--delay, 0s); }
+  .galaxy-art__sweep { opacity: 0.34; animation: galaxy-turn 24s linear infinite; }
+  .galaxy-art__core { animation: core-breathe 5s ease-in-out infinite alternate; }
+  .galaxy-art__star { animation: star-twinkle 4.5s ease-in-out infinite; animation-delay: var(--delay, 0s); }
 }
 @keyframes core-breathe {
-  from { opacity: 0.08; scale: 0.9; }
-  to   { opacity: 0.5;  scale: 1.08; }
+  from { opacity: 0.15; scale: 0.85; }
+  to   { opacity: 0.9;  scale: 1.15; }
 }
 @keyframes star-twinkle {
-  0%, 100% { opacity: 0;   scale: 0.4; rotate: 0deg; }
-  45%      { opacity: 0.95; scale: 1;   rotate: 15deg; }
-  60%      { opacity: 0.2; scale: 0.7; rotate: 20deg; }
+  0%, 100% { opacity: 0;  scale: 0.4; rotate: 0deg; }
+  40%      { opacity: 1;  scale: 1.25; rotate: 20deg; }
+  55%      { opacity: 0.6; scale: 0.9; rotate: 28deg; }
+  70%      { opacity: 0;  scale: 0.5; rotate: 35deg; }
 }
