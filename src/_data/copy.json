@@ -420,7 +420,7 @@
       },
       {
         "name": "Mastery",
-        "text": "Solved levels stay worth replaying, to play them better. Star ratings are planned.",
+        "text": "Solved levels stay worth replaying. Finish in fewer moves to earn up to 3 stars.",
         "tag": ""
       }
     ]
@@ -510,7 +510,7 @@
     "cards": [
       {
         "title": "Make a match",
-        "text": "Line up 3 or more balls of the same kind in a horizontal row. When the pile settles, the match clears.",
+        "text": "Line up at least 3 touching balls of the same colour in a horizontal row to clear them. The ball you're holding counts too.",
         "tag": "",
         "diagram": {
           "w": 5,
@@ -615,7 +615,7 @@
       },
       {
         "title": "Use the physics",
-        "text": "Touch any ball, even a buried one, and carry it through the pile. Let go, and gravity takes over. Balls fall, roll and settle.",
+        "text": "Touch any ball, even a buried one, and drag it through the pile. Let go, and the balls settle under gravity.",
         "tag": "",
         "diagram": {
           "w": 5,
@@ -708,14 +708,14 @@
       },
       {
         "title": "Objectives",
-        "text": "Each level has a goal, shown before you begin. Read it, study the pile, then move.",
-        "tag": "In design",
+        "text": "Each level has a goal. Complete it to finish the level and earn your first star.",
+        "tag": "",
         "icon": "objective"
       },
       {
         "title": "Stars & mastery",
-        "text": "Solved levels stay worth replaying. Come back to play them better. Star ratings for mastery are planned.",
-        "tag": "Planned",
+        "text": "A move is picking up a ball and letting it go somewhere new. Finish in fewer moves for 2 or 3 stars. Each level shows its move limits at the top, and in the Pause menu.",
+        "tag": "",
         "icon": "stars"
       },
       {
