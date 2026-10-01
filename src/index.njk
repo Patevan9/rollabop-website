@@ -31,7 +31,8 @@ pageClass: home
           <div class="tray__balls" style="--size: {{ tray.size }}%">
             {%- for b in tray.balls %}
             {%- set pos = "left:" + b.left + "%;bottom:" + b.bottom + "%" %}
-            {%- if b.color == "galaxy" %}{{ ui.galaxyBall("tray__galaxy", pos) }}{% else %}{{ ui.ball(b.color, "", pos) }}{% endif %}
+            {%- if b.color == "galaxy" and assets.galaxyBall.src %}<span class="ball ball--art tray__galaxy" style="{{ pos }}"><img src="/assets/galaxy/galaxy-ball-160.webp" srcset="/assets/galaxy/galaxy-ball-160.webp 160w, /assets/galaxy/galaxy-ball-480.webp 480w" sizes="64px" alt="" width="160" height="160" decoding="async"></span>
+            {%- elif b.color == "galaxy" %}{{ ui.galaxyBall("tray__galaxy", pos) }}{% else %}{{ ui.ball(b.color, "", pos) }}{% endif %}
             {%- endfor %}
           </div>
         </div>
