@@ -42,6 +42,24 @@
 </span>
 {% endmacro %}
 
+{#- The official Galaxy Ball artwork, brought to life: its painted stars twinkle,
+    the core breathes and a faint light turns through the arms. The image itself
+    never moves, so the glass reflections stay still. Star spots match the artwork. -#}
+{% macro galaxyArt(assets, cls="", style="", sizes="440px", small=false, alt="") %}
+{%- set stars = [
+  [0.686, 0.318, 22, 0], [0.443, 0.223, 10, 2.1], [0.334, 0.318, 10, 4.3], [0.209, 0.443, 9, 1.2],
+  [0.818, 0.648, 10, 3.4], [0.352, 0.727, 10, 5.6], [0.507, 0.836, 9, 0.7], [0.91, 0.51, 8, 2.8], [0.56, 0.24, 8, 6.2]
+] -%}
+<span class="galaxy-art {{ cls }}"{% if style %} style="{{ style }}"{% endif %}>
+  <img src="{{ '/assets/galaxy/galaxy-ball-160.webp' if small else assets.galaxyBall.src }}" srcset="/assets/galaxy/galaxy-ball-160.webp 160w, {% for s in assets.galaxyBall.srcset %}{{ s.src }} {{ s.w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="{{ sizes }}" alt="{{ alt }}" width="{{ assets.galaxyBall.width }}" height="{{ assets.galaxyBall.height }}" decoding="async"{% if not small %} loading="lazy"{% endif %}>
+  <span class="galaxy-art__sweep" aria-hidden="true"></span>
+  <span class="galaxy-art__core" aria-hidden="true"></span>
+  {%- for st in stars %}{% if not small or loop.index <= 3 %}
+  <span class="galaxy-art__star" aria-hidden="true" style="--x:{{ st[0] }};--y:{{ st[1] }};--s:{{ st[2] * (1.6 if small else 1) }}%;--delay:{{ st[3] }}s"></span>
+  {%- endif %}{% endfor %}
+</span>
+{% endmacro %}
+
 {#- A small instructional diagram of balls on walnut. See content.json. -#}
 {% macro diagram(d, label, uid) %}
 <div class="diagram-panel">

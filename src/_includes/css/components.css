@@ -535,3 +535,67 @@
 .form-status { margin: 0; padding: 1rem 1.2rem; border-radius: var(--radius); border: 1px solid var(--brass); background: rgba(201, 164, 92, 0.08); }
 .form-status.is-error { border-color: #e58b6b; background: rgba(229, 139, 107, 0.08); }
 .form-alt { margin-top: 1.5rem; color: var(--ink-muted); }
+
+/* ---------- Galaxy Ball artwork, alive ----------
+   The image stays still (so its glass reflections stay put); light moves inside it. */
+.galaxy-art {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  isolation: isolate;
+}
+.galaxy-art img { display: block; width: 100%; height: 100%; border-radius: 50%; }
+.galaxy-art__sweep, .galaxy-art__core, .galaxy-art__star {
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+/* faint light turning slowly through the spiral arms */
+.galaxy-art__sweep {
+  inset: 12%;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg at 53% 54%, transparent 0deg, rgba(150, 190, 255, 0.5) 30deg, transparent 75deg, transparent 180deg, rgba(150, 190, 255, 0.5) 210deg, transparent 255deg);
+  -webkit-mask: radial-gradient(circle at 53% 54%, #000 0 30%, transparent 70%);
+  mask: radial-gradient(circle at 53% 54%, #000 0 30%, transparent 70%);
+  opacity: 0;
+}
+/* the glowing heart of the galaxy, breathing */
+.galaxy-art__core {
+  left: 53%;
+  top: 54%;
+  width: 34%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 238, 205, 0.7), rgba(255, 190, 120, 0.25) 35%, rgba(130, 160, 255, 0.12) 55%, transparent 70%);
+  opacity: 0.15;
+}
+/* the painted stars, twinkling in place */
+.galaxy-art__star {
+  left: calc(var(--x) * 100%);
+  top: calc(var(--y) * 100%);
+  width: var(--s);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  background:
+    radial-gradient(circle, #fff 0 5%, rgba(255, 228, 175, 0.6) 13%, transparent 32%),
+    radial-gradient(ellipse 50% 2.5% at 50% 50%, rgba(255, 242, 215, 0.95), transparent),
+    radial-gradient(ellipse 2.5% 50% at 50% 50%, rgba(255, 242, 215, 0.95), transparent);
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .galaxy-art__sweep { opacity: 0.16; animation: galaxy-turn 48s linear infinite; }
+  .galaxy-art__core { animation: core-breathe 8s ease-in-out infinite alternate; }
+  .galaxy-art__star { animation: star-twinkle 7s ease-in-out infinite; animation-delay: var(--delay, 0s); }
+}
+@keyframes core-breathe {
+  from { opacity: 0.08; scale: 0.9; }
+  to   { opacity: 0.5;  scale: 1.08; }
+}
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0;   scale: 0.4; rotate: 0deg; }
+  45%      { opacity: 0.95; scale: 1;   rotate: 15deg; }
+  60%      { opacity: 0.2; scale: 0.7; rotate: 20deg; }
+}

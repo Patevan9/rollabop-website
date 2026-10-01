@@ -31,7 +31,7 @@ pageClass: home
           <div class="tray__balls" style="--size: {{ tray.size }}%">
             {%- for b in tray.balls %}
             {%- set pos = "left:" + b.left + "%;bottom:" + b.bottom + "%" %}
-            {%- if b.color == "galaxy" and assets.galaxyBall.src %}<span class="ball ball--art tray__galaxy" style="{{ pos }}"><img src="/assets/galaxy/galaxy-ball-160.webp" srcset="/assets/galaxy/galaxy-ball-160.webp 160w, /assets/galaxy/galaxy-ball-480.webp 480w" sizes="64px" alt="" width="160" height="160" decoding="async"></span>
+            {%- if b.color == "galaxy" and assets.galaxyBall.src %}{{ ui.galaxyArt(assets, "ball ball--art tray__galaxy", pos, "64px", true) }}
             {%- elif b.color == "galaxy" %}{{ ui.galaxyBall("tray__galaxy", pos) }}{% else %}{{ ui.ball(b.color, "", pos) }}{% endif %}
             {%- endfor %}
           </div>
@@ -102,7 +102,7 @@ pageClass: home
     <div class="galaxy__stage" data-reveal>
       <div class="galaxy__halo" aria-hidden="true"></div>
       {%- if assets.galaxyBall.src %}
-      <img class="galaxy__art" src="{{ assets.galaxyBall.src }}"{% if assets.galaxyBall.srcset %} srcset="{% for s in assets.galaxyBall.srcset %}{{ s.src }} {{ s.w }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="min(78vw, 440px)"{% endif %} alt="{{ assets.galaxyBall.alt }}" width="{{ assets.galaxyBall.width }}" height="{{ assets.galaxyBall.height }}" loading="lazy" decoding="async">
+      {{ ui.galaxyArt(assets, "galaxy__art", "", "min(78vw, 440px)", false, assets.galaxyBall.alt) }}
       {%- else %}
       <div class="galaxy__hero" role="img" aria-label="{{ assets.galaxyBall.alt }}">{{ ui.galaxyBall("galaxy__ball") }}</div>
       {%- endif %}
