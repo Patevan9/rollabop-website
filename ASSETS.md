@@ -13,7 +13,8 @@ To add a real asset:
 |------|--------|---------------|-----------------|
 | `rollabopLogo` | `src/assets/brand/` | ✅ **Done**: official transparent master, served as 480/960/1280px WebP | Official wordmark |
 | `lippyLogo` | `src/assets/brand/` | SVG preferred, or transparent PNG | "Lippy Robotics Labs" in text |
-| `appIcon` | `src/assets/icons/` | 512×512 PNG | Placeholder favicon (`favicon-placeholder.svg`); no social image |
+| `appIcon` | `src/assets/icons/` | ✅ **Done**: framed Galaxy Ball icon, 512px, transparent corners | Link previews; 180px version for phone home screens |
+| `favicon` | `src/assets/icons/` | ✅ **Done**: Galaxy Ball cut out as a circle, 32/48/192px | Browser tab icon |
 | `galaxyBall` | `src/assets/galaxy/` | Square, transparent background, ≥ 1200px, WebP or PNG | Interim SVG illustration, labelled on the page |
 | `heroArt` (optional) | `src/assets/galaxy/` or `brand/` | Tall render of the tray, WebP | Built-in CSS tray illustration, labelled on the page |
 | `screenshots.gameplay1` | `src/assets/screenshots/` | Portrait phone screenshot, WebP (~1080×2400) | Labelled phone-frame placeholder |
