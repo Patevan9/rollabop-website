@@ -53,6 +53,11 @@ pageClass: home
       <p class="lead">{{ c.trailer.body }}</p>
       <p class="small muted">{{ c.trailer.note }}</p>
       <a class="text-link" href="/trailer/">{{ c.trailer.fullscreen }}<span aria-hidden="true" class="text-link__arrow">&rarr;</span></a>
+      <p class="trailer__downloads small">{{ c.trailer.downloadsLabel }}
+        {%- for v in c.trailer.downloads %}
+        <a href="{{ v.href }}" download>{{ v.label }}<span class="muted"> ({{ v.detail }}, MP4)</span></a>{% if not loop.last %} ·{% endif %}
+        {%- endfor %}
+      </p>
     </div>
     <div class="trailer__frame" data-reveal>
       <iframe src="/trailer/" title="Rollabop trailer" loading="lazy" allow="autoplay; fullscreen"></iframe>

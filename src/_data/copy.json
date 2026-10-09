@@ -13,7 +13,20 @@
     "title": "See it in motion.",
     "body": "Watch balls pour into the tray, a move go wrong and come back with Undo, and a buried ball dragged through the pile to set off a cascade.",
     "note": "Plays with sound when you press play. You can pause it, replay it, or switch to widescreen.",
-    "fullscreen": "Open the trailer full screen"
+    "fullscreen": "Open the trailer full screen",
+    "downloadsLabel": "Download the video:",
+    "downloads": [
+      {
+        "label": "Portrait 9:16",
+        "detail": "9 MB",
+        "href": "/assets/video/rollabop-trailer-portrait.mp4"
+      },
+      {
+        "label": "Widescreen 16:9",
+        "detail": "7 MB",
+        "href": "/assets/video/rollabop-trailer-widescreen.mp4"
+      }
+    ]
   },
   "whatIs": {
     "eyebrow": "What is Rollabop?",

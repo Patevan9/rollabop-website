@@ -400,3 +400,5 @@
 @media (min-width: 900px) {
   .trailer__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 }
+.trailer__downloads { margin-top: 0.75rem; color: var(--ink-muted); }
+.trailer__downloads a { display: inline-block; min-height: 44px; line-height: 44px; margin-left: 0.35rem; }
