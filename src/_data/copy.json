@@ -7,6 +7,14 @@
     "secondaryLabel": "See how it plays",
     "secondaryHref": "#how-it-plays"
   },
+  "trailer": {
+    "_note": "The homepage trailer section. The trailer itself is src/trailer/index.html (self-contained; replace that file to update it).",
+    "eyebrow": "The trailer",
+    "title": "See it in motion.",
+    "body": "Watch balls pour into the tray, a move go wrong and come back with Undo, and a buried ball dragged through the pile to set off a cascade.",
+    "note": "Plays with sound when you press play. You can pause it, replay it, or switch to widescreen.",
+    "fullscreen": "Open the trailer full screen"
+  },
   "whatIs": {
     "eyebrow": "What is Rollabop?",
     "title": "A puzzle you can reach into.",
