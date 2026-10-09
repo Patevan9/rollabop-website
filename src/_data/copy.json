@@ -408,11 +408,11 @@
     "principle": "Match 3 or more. Larger matches earn more."
   },
   "galaxy": {
-    "eyebrow": "Galaxy Balls",
+    "eyebrow": "Galaxy balls",
     "title": "Some balls are more than pieces.",
-    "body": "Discover and collect spectacular Galaxy Balls, each with its own miniature world inside.",
-    "fairness": "Beauty, never power. A Galaxy Ball's rarity or price never makes it stronger than another. Each Galaxy design simply forms its own matching family.",
-    "note": "How Galaxy Balls are discovered and collected will be shared closer to release."
+    "body": "Discover and collect spectacular Galaxy balls, each with its own miniature world inside.",
+    "fairness": "Beauty, never power. A Galaxy ball's rarity or price never makes it stronger than another. Each Galaxy design simply forms its own matching family.",
+    "note": "How Galaxy balls are discovered and collected will be shared closer to release."
   },
   "levels": {
     "eyebrow": "Levels & puzzles",

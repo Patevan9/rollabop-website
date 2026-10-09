@@ -32,7 +32,7 @@
   },
   "appIcon": {
     "src": "/assets/icons/app-icon-512.png",
-    "alt": "Rollabop app icon: a glowing Galaxy Ball on walnut and brass",
+    "alt": "Rollabop app icon: a glowing Galaxy ball on walnut and brass",
     "width": 512,
     "height": 512,
     "placeholder": false,
@@ -54,11 +54,11 @@
       }
     ],
     "appleTouch": "/assets/icons/apple-touch-icon.png",
-    "note": "Browser tab icon: the Galaxy Ball cut out as a circle from brand-source/galaxy-ball-icon-source.png (the full scene is too detailed at 16-32px). apple-touch-icon.png is the framed app icon at 180px for phone home screens."
+    "note": "Browser tab icon: the Galaxy ball cut out as a circle from brand-source/galaxy-ball-icon-source.png (the full scene is too detailed at 16-32px). apple-touch-icon.png is the framed app icon at 180px for phone home screens."
   },
   "heroArt": {
     "src": "",
-    "alt": "A tall walnut Rollabop tray with brass trim, holding a settled pile of glowing glass balls and one Galaxy Ball.",
+    "alt": "A tall walnut Rollabop tray with brass trim, holding a settled pile of glowing glass balls and one Galaxy ball.",
     "width": 0,
     "height": 0,
     "placeholder": true,
@@ -76,11 +76,11 @@
         "w": 900
       }
     ],
-    "alt": "A clear glass Galaxy Ball holding a glowing blue spiral galaxy.",
+    "alt": "A clear glass Galaxy ball holding a glowing blue spiral galaxy.",
     "width": 900,
     "height": 900,
     "placeholder": false,
-    "note": "Official Galaxy Ball artwork, cut out as a circle from brand-source/galaxy-ball-icon-source.png."
+    "note": "Official Galaxy ball artwork, cut out as a circle from brand-source/galaxy-ball-icon-source.png."
   },
   "googlePlayBadge": {
     "src": "",
