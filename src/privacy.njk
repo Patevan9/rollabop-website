@@ -19,14 +19,38 @@ permalink: /privacy/
   {%- if draft %}
   <aside class="notice" role="note" aria-labelledby="draft-title">
     <h2 id="draft-title" class="notice__title">Draft: needs final review before publication</h2>
-    <p>This policy is not final. Sections marked <span class="tag">To be confirmed</span> describe what the final policy must cover. They are not statements about how the Rollabop app handles data. The final policy will be published before Rollabop is released.</p>
+    <p>This policy is not final yet. The final policy will be published before Rollabop is released.</p>
   </aside>
   {%- endif %}
 
   <article class="legal">
     <section>
       <h2>Who we are</h2>
-      <p>Rollabop is a game by {{ site.studio }} ("we", "us"). This policy will explain what information the Rollabop app and this website handle, and why.</p>
+      <p>Rollabop is a game by {{ site.studio }} ("we", "us"). This policy explains what information the Rollabop app and this website handle, and why.</p>
+    </section>
+
+    <section>
+      <h2>The Rollabop app</h2>
+      <p><strong>No account, and no personal data held by us.</strong> Rollabop has no accounts or sign-in, and we do not run servers that collect information about you. Your progress and settings (levels, stars, sound, music and haptics) are stored only on your device. They are removed if you uninstall the app or clear its data.</p>
+      <p><strong>Optional rewarded ads (Google AdMob).</strong> Rollabop offers optional video ads: you choose to watch one, for example to undo a move. These ads are provided by Google AdMob. To show and measure ads, and to prevent fraud, Google may collect information from your device, such as your device's advertising ID, IP address, approximate location, device and app information, and how you interact with ads. We do not receive this information: Rollabop is only told whether an ad was watched to the end. See <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses information from sites or apps that use its services</a>.</p>
+      <p><strong>Your consent.</strong> In the European Economic Area, the United Kingdom and Switzerland, Rollabop asks for your consent with Google's consent message before any ad is requested. You can agree, decline, or choose options. You can change your choice at any time in Rollabop's <strong>Settings &rarr; Privacy options</strong> (shown where it applies).</p>
+      <p><strong>App permissions.</strong> Rollabop uses internet access and network status (to load ads), the advertising ID (used by Google for ads, as above), and vibration (for optional haptics, which you can turn off in Settings).</p>
+      <p><strong>Purchases.</strong> Rollabop has no in-app purchases at present. If that changes, this policy will be updated first.</p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>Rollabop is designed for players aged 13 and over, and is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided information through Rollabop, please contact us and we will help.</p>
+    </section>
+
+    <section>
+      <h2>Your choices and rights</h2>
+      <ul>
+        <li>Change your ad consent at any time in Rollabop's <strong>Settings &rarr; Privacy options</strong> (where shown).</li>
+        <li>Reset or delete your advertising ID, or opt out of personalised ads, in your Android settings (for example <strong>Settings &rarr; Google &rarr; Ads</strong>, or <strong>Settings &rarr; Privacy &rarr; Ads</strong>).</li>
+        <li>Your game progress stays on your device: uninstalling Rollabop or clearing its data removes it.</li>
+        <li>Depending on where you live, you may have rights to access or delete personal data. Because we do not hold personal data from the app, requests about ad data are handled by Google (see the links above). For anything else, please contact us.</li>
+      </ul>
     </section>
 
     <section>
@@ -41,30 +65,9 @@ permalink: /privacy/
         {%- endif %}
       </ul>
       {%- if site.supportForm.formspreeId %}
-      <p><strong>The support form.</strong> If you use the form on the <a href="/support/">Support page</a>, what you type (your email address, message and any optional device details) is sent to us through <a href="https://formspree.io/legal/privacy-policy" rel="noopener">Formspree</a>, a form-handling service, and forwarded to our support inbox. It is used only to answer your request. {{ ui.tag("To be confirmed") }} How long messages are kept will be stated here.</p>
+      <p><strong>The support form.</strong> If you use the form on the <a href="/support/">Support page</a>, what you type (your email address, message and any optional device details) is sent to us through <a href="https://formspree.io/legal/privacy-policy" rel="noopener">Formspree</a>, a form-handling service, and forwarded to our support inbox. It is used only to answer your request, kept only as long as needed to do so, and deleted within 12 months.</p>
       {%- endif %}
-      <p>Like any website, the service that hosts it may keep standard technical logs, such as IP addresses, for security and reliability. {{ ui.tag("To be confirmed") }} The hosting provider and its policy will be named here.</p>
-    </section>
-
-    <section>
-      <h2>The Rollabop app {{ ui.tag("To be confirmed") }}</h2>
-      <p>The final policy will state clearly:</p>
-      <ul>
-        <li>What information, if any, the app collects, and why.</li>
-        <li>Whether any information leaves your device, and where it goes.</li>
-        <li>Any third-party services used, such as for optional ads or purchases, and links to their policies.</li>
-        <li>How long any information is kept.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Children {{ ui.tag("To be confirmed") }}</h2>
-      <p>How Rollabop approaches younger players will be described here.</p>
-    </section>
-
-    <section>
-      <h2>Your choices and rights {{ ui.tag("To be confirmed") }}</h2>
-      <p>How you can access, correct or delete any information, and your rights where you live, will be described here.</p>
+      <p>This website is hosted on GitHub Pages. Like any website host, GitHub may keep standard technical logs, such as IP addresses, for security and reliability. See the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub General Privacy Statement</a>.</p>
     </section>
 
     <section>
@@ -77,7 +80,7 @@ permalink: /privacy/
       {%- if site.supportEmail %}
       <p>Questions about privacy: <a href="mailto:{{ site.supportEmail }}?subject=Rollabop%20privacy">{{ site.supportEmail }}</a></p>
       {%- else %}
-      <p>A contact for privacy questions will be published here before release. {{ ui.tag("To be confirmed") }}</p>
+      <p>A contact for privacy questions will be published here before release.</p>
       {%- endif %}
     </section>
   </article>

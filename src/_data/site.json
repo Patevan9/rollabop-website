@@ -33,8 +33,8 @@
   "_social_note": "Official community links only, e.g. { \"label\": \"YouTube\", \"url\": \"https://...\" }. Empty list shows nothing.",
 
   "privacy": {
-    "status": "draft",
-    "lastUpdated": "",
+    "status": "final",
+    "lastUpdated": "2026-10-10",
     "_note": "Keep 'draft' until the policy has had its final review. While it is 'draft' the page shows a review banner and asks search engines not to index it. Set to 'final' and fill lastUpdated (e.g. 2026-11-01) when approved."
   }
 }
