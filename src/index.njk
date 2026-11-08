@@ -143,7 +143,7 @@ pageClass: home
 
 {#- 5. LEVELS -#}
 <section class="section levels" aria-labelledby="levels-title">
-  <div class="wrap levels__grid">
+  <div class="wrap levels__grid{% if not assets.screenshots.levelSelect.src %} levels__grid--solo{% endif %}">
     <div class="levels__text" data-reveal>
       {{ ui.heading(c.levels.eyebrow, c.levels.title, "levels-title") }}
       <p class="lead">{{ c.levels.intro }}</p>
@@ -153,9 +153,11 @@ pageClass: home
         {%- endfor %}
       </ul>
     </div>
+    {%- if assets.screenshots.levelSelect.src %}
     <div class="levels__shot" data-reveal>
       {{ ui.shot(assets.screenshots.levelSelect) }}
     </div>
+    {%- endif %}
   </div>
 </section>
 

@@ -119,13 +119,13 @@
       "note": "The Rollabop title screen."
     },
     "levelSelect": {
-      "src": "/assets/screenshots/level-21.webp",
-      "alt": "Rollabop gameplay, level 21: glass balls piled around a wooden divider in the tray",
-      "width": 720,
-      "height": 1279,
-      "placeholder": false,
+      "src": "",
+      "alt": "",
+      "width": 1080,
+      "height": 2400,
+      "placeholder": true,
       "label": "Level select",
-      "note": "Real gameplay screenshot (level 21) used here until a level-select screenshot exists."
+      "note": "The real level-select screen, once built. While empty, the Levels section shows no picture."
     }
   }
 }

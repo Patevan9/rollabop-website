@@ -252,6 +252,7 @@
 .brass-list__name { font-size: var(--step-1); margin-bottom: 0.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
 .brass-list p { color: var(--ink-muted); margin: 0; }
 .levels__shot { width: min(100%, 300px); margin-inline: auto; }
+.levels__grid.levels__grid--solo { grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 900px) {
   .levels__grid { grid-template-columns: 1.3fr 0.7fr; }
 }
