@@ -12,9 +12,9 @@
   "_url_note": "Your domain, e.g. https://rollabop.com (no trailing slash). Leave empty until you have one. When set, the site adds canonical links, social preview URLs and a sitemap.",
 
   "release": {
-    "status": "coming-soon",
-    "label": "Coming to Android",
-    "playStoreUrl": "",
+    "status": "available",
+    "label": "Available on Google Play",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.lippyrobotics.rollabop",
     "_note": "When the Play Store listing is live: paste its URL into playStoreUrl, add the official badge to assets.json (googlePlayBadge), and set status to 'available'. Until then only the 'Coming to Android' label shows."
   },
 

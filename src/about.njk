@@ -41,7 +41,7 @@ permalink: /about/
       <div><dt>Game</dt><dd>{{ site.name }}</dd></div>
       <div><dt>Developer</dt><dd>{{ site.studio }}</dd></div>
       <div><dt>Platform</dt><dd>Android{% if site.release.status != "available" %} (coming soon){% endif %}</dd></div>
-      <div><dt>Version</dt><dd>{{ site.version or "Not yet released" }}</dd></div>
+      <div><dt>Version</dt><dd>{{ site.version or ("Latest version on Google Play" if site.release.status == "available" else "Not yet released") }}</dd></div>
       {%- if site.url %}<div><dt>Website</dt><dd><a href="{{ site.url }}">{{ site.url | replace("https://", "") }}</a></dd></div>{% endif %}
       <div><dt>Copyright</dt><dd>&copy; {{ site.copyrightYear }} {{ site.studio }}. All rights reserved.</dd></div>
     </dl>
