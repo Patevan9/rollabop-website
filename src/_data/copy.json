@@ -466,7 +466,7 @@
     "items": [
       {
         "name": "More than colour",
-        "text": "Matching information should not rely on colour alone. Shape cues for each ball family are in development."
+        "text": "Matching should not rely on colour alone. We'd like to add small symbols to each ball color, so players who are colorblind can tell them apart."
       },
       {
         "name": "Readable contrast",
