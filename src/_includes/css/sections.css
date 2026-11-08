@@ -403,3 +403,5 @@
 }
 .trailer__downloads { margin-top: 0.75rem; color: var(--ink-muted); }
 .trailer__downloads a { display: inline-block; min-height: 44px; line-height: 44px; margin-left: 0.35rem; }
+
+.galaxy__store { width: min(100%, 240px); margin-top: 1.75rem; }

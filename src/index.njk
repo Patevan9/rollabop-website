@@ -137,6 +137,9 @@ pageClass: home
       <p class="lead">{{ c.galaxy.body }}</p>
       <p class="galaxy__fair">{{ c.galaxy.fairness }}</p>
       <p class="small muted">{{ c.galaxy.note }}</p>
+      {%- if assets.screenshots.store and assets.screenshots.store.src %}
+      <div class="galaxy__store">{{ ui.shot(assets.screenshots.store) }}</div>
+      {%- endif %}
     </div>
   </div>
 </section>

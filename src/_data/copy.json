@@ -412,7 +412,7 @@
     "title": "Some balls are more than pieces.",
     "body": "Discover and collect spectacular Galaxy balls, each with its own miniature world inside.",
     "fairness": "Beauty, never power. A Galaxy ball's rarity or price never makes it stronger than another. Each Galaxy design simply forms its own matching family.",
-    "note": "How Galaxy balls are discovered and collected will be shared closer to release."
+    "note": "Some Galaxy balls are earned in play, some arrive as gifts, and seasonal designs can be found in the Store."
   },
   "levels": {
     "eyebrow": "Levels & puzzles",
@@ -422,12 +422,12 @@
       {
         "name": "Handcrafted levels",
         "text": "Designed by hand to reward a moment of insight.",
-        "tag": "Planned"
+        "tag": ""
       },
       {
         "name": "Larger-match challenges",
         "text": "Goals that ask for rows of 4, 5 or more.",
-        "tag": "In design"
+        "tag": ""
       },
       {
         "name": "Cascades",
@@ -437,7 +437,7 @@
       {
         "name": "Physical structures",
         "text": "Elegant obstacles that change how the pile moves, later in the journey.",
-        "tag": "Planned"
+        "tag": ""
       },
       {
         "name": "Mastery",
@@ -457,12 +457,12 @@
       "No punishment for thoughtful play."
     ],
     "promise": "Every level can be beaten by a thoughtful player without paying and without watching an ad.",
-    "note": "Optional rewarded ads may come later, and only ever when you choose them."
+    "note": "Rewarded ads are always optional, and only ever play when you choose them."
   },
   "accessibility": {
     "eyebrow": "Accessibility",
     "title": "Clear to see. Comfortable to play.",
-    "intro": "Rollabop is still in development. This is the direction we are building toward.",
+    "intro": "We want Rollabop to be comfortable for everyone to play, and we keep improving it.",
     "items": [
       {
         "name": "More than colour",
@@ -741,8 +741,8 @@
       },
       {
         "title": "Obstacles",
-        "text": "Later levels may add elegant physical structures to steer around. They challenge the puzzle, not your finger.",
-        "tag": "Later",
+        "text": "Later levels add elegant physical structures to steer around. They challenge the puzzle, not your finger.",
+        "tag": "",
         "icon": "obstacle"
       }
     ]

@@ -60,7 +60,7 @@
     "src": "/assets/screenshots/level-35.webp",
     "alt": "Rollabop gameplay, level 35: glass balls and Galaxy balls resting on wooden shelves inside the walnut tray",
     "width": 720,
-    "height": 1280,
+    "height": 1281,
     "placeholder": false,
     "note": "Real gameplay screenshot (level 35), cropped to the tray."
   },
@@ -126,6 +126,15 @@
       "placeholder": true,
       "label": "Level select",
       "note": "The real level-select screen, once built. While empty, the Levels section shows no picture."
+    },
+    "store": {
+      "src": "/assets/screenshots/store.webp",
+      "alt": "Rollabop's Store, showing owned Galaxy balls: Lunar, Aurora, Pioneer, Autumn Leaves, Jack-o'-Lantern and Haunted Mansion, with a Restore purchases button",
+      "width": 560,
+      "height": 1343,
+      "placeholder": false,
+      "label": "Store",
+      "note": "Real screenshot of the in-game Store (Owned tab)."
     }
   }
 }
