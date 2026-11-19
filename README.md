@@ -2,7 +2,7 @@
 
 The official website for **Rollabop**, a game by Lippy Robotics Labs.
 
-Live at **https://patevan9.github.io/rollabop-website/** once GitHub Pages is switched on.
+Live at **https://lippyroboticslabs.com/rollabop-website/** (the old address patevan9.github.io/rollabop-website/ redirects there).
 
 A static site built with [Eleventy](https://www.11ty.dev/). It outputs plain HTML and CSS, plus one small optional script.
 There is no framework in the browser. There are no cookies, analytics, tracking or third-party requests.
